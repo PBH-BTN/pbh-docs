@@ -7,11 +7,13 @@ sidebar_position: 1
 
 ## 下载和安装
 
-打开 [GitHub Releases](https://github.com/PBH-BTN/PeerBanHelper/releases/latest)。你会找到两个以 `.exe` 结尾的安装程序。
+打开 [GitHub Releases](https://github.com/PBH-BTN/PeerBanHelper/releases/latest)。你会找到四个以 `.exe` 结尾的安装程序。  
 
-如果你是购买了高通骁龙 ARM 架构处理器的 Windows 笔记本的倒霉蛋用户：请下载带有 `arm64` 的 `.exe` 安装程序。  
-其它 Intel/AMD 等处理器的用户，请下载 `x64` 的 `.exe` 安装程序。  
-运行，并一路下一步即可安装完成。
+其中，一种带有 `nojava` 标记，另一种不带。如果你对什么是 Java 不熟悉，请选择**不带**nojava标记的下载。  
+
+然后，你还会注意到还有 `x64` 和 `arm64` 的区别：  
+* 普通用户，请全部统一下载带有 `x64` 标记的 `.exe` 安装程序。  
+* 如果你是不幸购买了高通骁龙 ARM 架构处理器的 Windows 笔记本的倒霉蛋小白鼠用户：请下载带有 `arm64` 的 `.exe` 安装程序。  
 
 ### 开机启动
 
