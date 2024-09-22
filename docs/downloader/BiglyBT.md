@@ -12,7 +12,7 @@ PeerBanHelper 与 BiglyBT 完全兼容，支持最佳。
 
 PeerBanHelper 将借助 BiglyBT 的插件系统连接到 BiglyBT。
 
-请注意你的 BiglyBT 运行的 Java 版本必须是 Java 11+ 版本。如果是 Java 8 或者更低版本，则无法使用。
+请注意你的 BiglyBT 运行的 Java 版本必须是 Java 11+ 版本。如果是 Java 8 或者更低版本，则无法使用，必须[切换 Java 版本](https://github.com/BiglySoftware/BiglyBT/wiki/Java-Versions)。
 
 ## 确认 BiglyBT 的 Java 版本
 

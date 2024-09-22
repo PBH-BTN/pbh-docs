@@ -10,9 +10,16 @@ sidebar_position: 1
 
 请选择您的操作系统或者部署方式，查看安装教程：
 
-| Windows                    | Windows（免安装）                  | Docker (Linux/MacOS)      | Linux 自行部署           | 群晖 DSM                    |
-| -------------------------- | ---------------------------------- | ------------------------- | ------------------------ | --------------------------- |
-| [查看](./setup/Windows.md) | [查看](./setup/WindowsPortable.md) | [查看](./setup/Docker.md) | [查看](./setup/Linux.md) | [查看](./setup/Synology.md) |
+| 系统/平台                     | 链接                               |
+| ----------------------------- | ---------------------------------- |
+| Windows 安装版                | [查看](./setup/Windows.md)         |
+| Windows 便携版                | [查看](./setup/WindowsPortable.md) |
+| Docker                        | [查看](./setup/Docker.md)          |
+| 群晖 DSM（套件）              | [查看](./setup/Imnks.md)           |
+| 群晖 DSM（Container Manager） | [查看](./setup/Synology.md)        |
+| Linux 安装版                  | [查看](./setup/LinuxInstall4j.md)  |
+| Linux 手动部署                | [查看](./setup/Linux.md)           |
+
 
 ## 遇到困难，需要帮助？
 

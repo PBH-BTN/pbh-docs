@@ -1,8 +1,8 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
-# Synology DSM 群晖
+# Synology DSM 群晖（Docker）
 
 ## 创建数据目录
 
