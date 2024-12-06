@@ -1,44 +1,39 @@
 ---
 sidebar_position: 2
 ---
-# Manual Install
 
-## Install Java
-
-Install JDK by homebrew:
+# 手动安装
+## 安装依赖
+使用homebrew安装jdk：
 
 ```shell
-brew install --cask oracle-jdk
+brew install --cask zulu
 ```
 
-Verify
+验证安装是否成功：
 
 ```shell
 java -version
 ```
 
-If the installation is successful, you will see output similar to the following:
+如果安装成功，则会输出类似下列的版本号：
 
 ```plain
-java 23.0.1 2024-10-15
-Java(TM) SE Runtime Environment (build 23.0.1+11-39)
-Java HotSpot(TM) 64-Bit Server VM (build 23.0.1+11-39, mixed mode, sharing)
+openjdk version "23.0.1" 2024-10-15
+OpenJDK Runtime Environment Zulu23.30+13-CA (build 23.0.1+11)
+OpenJDK 64-Bit Server VM Zulu23.30+13-CA (build 23.0.1+11, mixed mode, sharing)
 ```
 
-## Running
+## 运行
+访问 Github Release 下载 [JAR 文件](https://github.com/PBH-BTN/PeerBanHelper/releases/latest/download/PeerBanHelper.jar)。  
 
-Download the `jar` and `libraries.tar.gz` from [Release](https://github.com/PBH-BTN/PeerBanHelper/releases/latest)
-Unzip them into a same directory.
-
-Run:
-
+使用命令启动 PBH：
 ```shell
-java -Djava.awt.headless=true -Xmx512M -Xss512k -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+ShrinkHeapInSteps -jar PeerBanHelper.jar nogui
+java -Djava.awt.headless=true -Xmx512M -Xss512k -XX:+UseG1GC -XX:+UseStringDeduplication -XX:+ShrinkHeapInSteps -jar PeerBanHelper.jar nogui 
 ```
 
-## Services
-
-touch file `~/Library/LaunchAgents/peerbanhelper.plist` with content:
+## 服务
+创建`~/Library/LaunchAgents/peerbanhelper.plist`文件，并写入：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -70,7 +65,7 @@ touch file `~/Library/LaunchAgents/peerbanhelper.plist` with content:
 </plist>
 ```
 
-The path `/path/to/PBH` is the directory where you put the `jar` and `libraries.tar.gz`.
+注意替换`/path/to/PBH`为jar文件的目录，完成后使用以下命令启动：
 
 ```shell
 launchctl load -w ~/Library/LaunchAgents/peerbanhelper.plist

@@ -1,14 +1,14 @@
 {
   "link.title.文档": {
-		"message": "Wiki",
+    "message": "Wiki",
     "description": "The title of the footer links column with title=文档 in the footer"
   },
   "link.title.社区": {
-		"message": "Community",
+    "message": "Community",
     "description": "The title of the footer links column with title=社区 in the footer"
   },
   "link.title.支持我们": {
-		"message": "Support us",
+    "message": "Support us",
     "description": "The title of the footer links column with title=支持我们 in the footer"
   },
   "link.item.label.PeerBanHelper": {
@@ -20,7 +20,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/PBH-BTN/PeerBanHelper"
   },
   "link.item.label.QQ 群": {
-		"message": "QQ Group",
+    "message": "QQ Group",
     "description": "The label of footer link with label=QQ 群 linking to https://qm.qq.com/cgi-bin/qm/qr?k=w5as_wH2G1ReUrClreCYhR69XiNCuP65&jump_from=webapi&authKey=EyjMX7Pwc77XLM51V6FEcR7oXnG8fsUbSFqYZ4PPiEpq32vBglJn/jFvpc3LFDhn"
   },
   "link.item.label.爱发电": {
@@ -28,7 +28,11 @@
     "description": "The label of footer link with label=爱发电 linking to https://afdian.com/a/Ghost_chu"
   },
   "copyright": {
-		"message": "Licensed under <a href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.en\">CC BY-NC v4.0</a>. Built with Docusaurus.",
+    "message": "Licensed under <a href=\"https://creativecommons.org/licenses/by-nc/4.0/deed.en\">CC BY-NC v4.0</a>. Built with Docusaurus.",
     "description": "The footer copyright"
+  },
+  "link.item.label.Telegram": {
+    "message": "Telegram",
+    "description": "The label of footer link with label=Telegram linking to https://t.me/+_t3Nt5GZ6bJmYjBl"
   }
 }

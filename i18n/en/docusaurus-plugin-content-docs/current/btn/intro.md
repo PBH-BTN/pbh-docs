@@ -1,73 +1,78 @@
 ---
 sidebar_position: 1
 ---
-# What is BTN
 
-Before we start to understand what BTN is, we first need to understand various anti-leeching methods in history.
+# 什么是 BTN
 
-## The history of Anti-leeching
+在开始了解什么是 BTN 之前，我们首先需要了解一下历史上的各种反吸血手段。
 
-### Prehistoric Era
+## 反吸血的前世今生
 
-In the beginning, people used blacklists based on PeerID and ClientName to block a specific type of client, preventing them from connecting to the downloader to anti-leech.
-This anti-leeching method is crude and effective, but it assumes that the downloader will not disguise PeerID and ClientName. Once disguised, this function is completely ineffective.
+### 史前时代
 
-### Traffic Detection Era
+最开始时，人们使用基于 PeerID 和 ClientName 的黑名单来屏蔽特定一类客户端，阻止他们连接到下载器来反吸血。  
+这种反吸血方式粗暴好用，但前提是下载器不会对 PeerID 和 ClientName 伪装，一旦进行了伪装，则此功能则完全失效。
 
-Later, downloaders like BitComet introduced traffic monitoring methods. If a Peer does not send any segments to the downloader for a period of time while downloading a file, it is considered leeching and is banned.
-However, for the leechers starting with 101., they would give very small upload traffic, but enough to deceive this kind of traffic monitoring anti-leeching method. Moreover, this method is useless for seeders.
+### 流量检测时代
 
-### Tit-for-tat Algorithm Anti-leeching Era
+后来，BitComet 等下载器引入了流量监测方式。如果下载文件的时候，一个 Peer 超过一段时间没有发送给下载器任何片段，就认为是吸血并封禁。  
+然而对于 101. 打头的这批吸血者，它们会给很小的上传流量，但足以骗过这种流量监测的反吸血方式。此外此方式对做种用户毫无作用。
 
-LibTorrent introduced a tit-for-tat, confrontational anti-leeching algorithm. If a Peer is unwilling to provide file segments, this Peer's priority in LT will gradually decrease until it completely stops transmitting data.
-Similar to traffic monitoring, a little upload is enough to deceive the detection, and it is useless for seeders (because seeding does not download any segments).
+### 以牙还牙的算法反吸血时代
 
-### Heuristic Detection Algorithm
+LibTorrent 引入了一种以牙还牙，针锋相对的反吸血算法。如果一个 Peer 不愿意提供文件片段，这个 Peer 在 LT 的优先级就会慢慢降低，直至完全不传输数据。  
+和流量监测相似，一点上传就足以骗过检测，且对做种用户毫无用处（因为做种不会下载任何片段）。
 
-The heuristic detection algorithm (Progress Checker/PCB) proposed by PeerBanHelper can effectively detect cheating methods such as progress rollback and excessive downloading. But it also has its own shortcomings - slow response.
-By the time the detection is triggered, the leecher has already maliciously downloaded a considerable amount of data. Therefore, although this method of anti-leeching is effective, it is inefficient. It can only be used to minimize losses.
+### 启发式检测算法
 
-## So What to Do
+由 PeerBanHelper 提出的启发式检测算法（进度检查器/PCB）可以有效的检测如进度回退、过量下载这类作弊手段。但其也有自己的缺点——反应慢。  
+当检测被触发的时候，吸血者已经恶意下载了不少量的数据。因此通过这种方式反吸血尽管效果不错，但效率较低。只能用作尽可能减少损失。  
 
-The answer is: shared IP rules.
+## 所以怎么办
 
-At first, we passed high-risk IP segments to each other. But with the start of guerrilla warfare, you block my IP, I change it, and unfortunately, this is a very time-sensitive thing. Before more people know about the new rules, the leecher may have already switched to the next IP address.
-Therefore, a data analysis and IP blocking technology that can respond quickly and timely must appear.
+答案是：共享 IP 规则。
 
-## The Answer is BTN
+最开始我们通过人传人互相传递高风险 IP 段。但随着游击战的开始，IP 你封我换，而很遗憾这又是一个时效性很高的东西。在还没来得及让更多人知道新规则之前，吸血者可能就已经更换到了下一个 IP 地址。  
+因此，必须有一种可以快速和及时响应的数据分析和 IP 封禁技术出现。
 
-BTN (full name BitTorrent Threat Network), it consists of BTN servers and BTN clients. Data is exchanged through the [BTN protocol](https://github.com/PBH-BTN/BTN-Spec).
+## 答案是 BTN
 
-After the BTN client discovers an abnormal Peer through methods such as PCB, it will report to the server regularly through the BTN protocol. In this way, we can collect data from a large number of clients, generate a list of abnormal IPs, and distribute them to different clients through the BTN protocol, blocking them out before they start leeching.
+BTN（全称 BitTorrent Threat Network），它由 BTN 服务器和 BTN 客户端组成。通过 [BTN 协议](https://github.com/PBH-BTN/BTN-Spec) 交换数据。
 
-## What Can BTN Do?
+BTN 客户端通过 PCB 等方式发现了异常 Peer 后，便会通过 BTN 协议定时上报到服务器。这样我们就可以集合大量客户端的数据，生成一份异常 IP 列表，并通过 BTN 协议再下发给不同的客户端，在开始吸血之前就将它们屏蔽在外。
 
-### Collect, Analyze, and Ban Reports
+## BTN 能做什么？
 
-BTN can receive ban reports reported by clients. If an IP (/segment) is banned by multiple people, then it is a high-risk IP address. BTN will automatically ban it and notify other clients to ban it together.
+### 收集、分析封禁报告
 
-### Prevent Dispersed Leeching
+BTN 能够接收客户端上报的封禁报告，如果一个 IP（/段）被多个人封禁，那么它就是一个高风险 IP 地址。BTN 会自动将其封禁，并通知其它客户端也一起封禁它。
 
-Some leechers are smart, they download the same file from different people.
-From the perspective of each person, the leecher only downloaded the file once from them, but in fact, the leecher has downloaded a lot of data far beyond the file size.
+### 阻止分散吸血
 
-BTN analyzes the total download volume of each IP (segment) on each torrent, checks for dispersed leeching, and automatically bans them.
+一些吸血者很聪明，它们在不同的人那里下载相同文件。  
+这样从每一个人的角度来看，吸血者都只在自己这里下载了一次文件，但实际上吸血者已远远下载了超过文件本身体积大量的数据。  
 
-### Discover New Clients
+BTN 通过分析每个 IP（段）在每个种子上的总下载量，检查是否有分散吸血的情况，并将它们自动封禁。
 
-When reporting data, BTN will also check whether it is a new client that has never been seen before. And record the first appearance and the last time seen.
-This helps to infer the approximate time range of malicious leeching activities.
+### 发现新型客户端
 
-In August of the 24th year, it also helped us discover a leeching client using a random PeerID.
+在数据上报时，BTN 还会检查是否是一个从未见过的新客户端。并记录首次出现和最后一次见到的时间。  
+这有利于推断恶意吸血者进行吸血活动的大致时间范围。
 
-### Avoid PBH Being Bypassed
+在 24 年 8 月，还帮助我们发现了一起使用随机 PeerID 的吸血客户端。
 
-In addition to banning data, the BTN client will also take a real-time snapshot of the status on the downloader from time to time. This way we can detect whether there are malicious leechers bypassing the existing detection through new methods.
+### 避免 PBH 被针对绕过
 
-## Concerns about Privacy and Security
+除了封禁数据，BTN 客户端还会定时拍摄一次下载器上的实时状态快照。这样我们能够检测是否有恶意吸血者通过新的方式绕过了现有的检测。  
 
-It sounds like a lot of data needs to be uploaded to the server. The answer is: yes.
+## 隐私安全的顾虑
 
-To perform these analysis operations, BTN must collect and upload a large amount of necessary data, all types of uploaded data can be found in the [BTN protocol specification](https://github.com/PBH-BTN/BTN-Spec).
+听起来要做到这些要向服务器上传大量数据。答案是：是的。
 
-It is particularly worth mentioning that: when uploading, we will not upload the info_hash and name of the torrent. Instead, we use the irreversible hashed torrent.
+要进行这些分析操作，BTN 必须收集和上传大量必须数据，所有上传的数据类型可在 [BTN 协议规范](https://github.com/PBH-BTN/BTN-Spec) 中找到。  
+
+特别需要提及的是：在上传时，我们不会上传种子的 info_hash 和种子的名称。取而代之的是不可逆哈希过的 torrent_identifier 和种子大小。这样我们就不会知道您提交的种子是什么（我们也不关心这些），我们只关注是否是相同的种子/不同的种子。
+
+如果您不愿意提供数据，BTN 客户端也通常有提交控制选项。将其关闭就可以只接收规则，不提交数据了。
+
+永远记住：只连接到你信任的 BTN 服务器。

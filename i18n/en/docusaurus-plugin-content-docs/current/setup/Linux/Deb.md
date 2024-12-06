@@ -4,22 +4,24 @@ sidebar_position: 1
 
 # Debian/Ubuntu/Kali Linux
 
->Suitable for Debian-derived distributions, such as Ubuntu, Kali Linux, etc.
+>适用于Debian/Ubuntu/Kali Linux等发行版
 
-## Install dependencies
+## 安装依赖
+
+使用`apt`安装 OpenJDK 21 或更高版本：
 
 ```shell
 sudo apt-get update
 sudo apt-get install openjdk-21-jdk-headless -y
 ```
 
-Verify:
+验证安装是否成功：
 
 ```shell
 java -version
 ```
 
-You will get the following output if you have successfully installed:
+如果安装成功，则会输出类似下列的版本号：
 
 ```plain
 openjdk version "xx.xx.xxx" 2024-01-16
@@ -27,21 +29,21 @@ OpenJDK Runtime Environment (build xxxxxxx)
 OpenJDK 64-Bit Server VM (build xxxxxxx, mixed mode, sharing)
 ```
 
-## Install
-Download the deb file from [Release](https://github.com/PBH-BTN/PeerBanHelper/releases/latest)
+## 下载安装
+访问 [PBH最新版版本发布页](https://github.com/PBH-BTN/PeerBanHelper/releases/latest) 下载 DEB 文件。
 
-Install the deb:
+安装 DEB 文件：
 
 ```shell
 sudo dpkg -i peerbanhelper_*.*.*_all.deb
 ```
 
-## Run
+## 启动
 ```shell
 systemctl start peerbanhelper
 ```
 
-## Auto-start
+如需后台/开机运行，请运行：
 ```shell
 systemctl enable peerbanhelper
 ```

@@ -1,30 +1,30 @@
-# FAQ
+# 常见问题
 
-## After upgrading, WebUI is white/black screen or stuck on infinite data loading
+## 升级后 WebUI 白屏/黑屏/卡无限数据加载
 
-Clear your browser cache and refresh.
+清除浏览器缓存。
 
-## Startup error Failed to bind to port / Port already in use. Make sure no other process is using port XXXX and try again.
+## 启动报错 Failed to bind to port / Port already in use. Make sure no other process is using port XXXX and try again.
 
-Two PeerBanHelpers are launched at the same time (especially common when incorrectly selected "Install as system service" during installation); or the port is occupied causing port conflict (such as Uplay/Ubisoft Connect etc.).
+同时启动了两个 PeerBanHelper（特别常见于安装时错误勾选了 “安装为系统服务”）；或者端口被占用导致端口冲突（如 Uplay/Ubisoft Connect 等）。
 
-### If it is installed as a system service
+### 如果是安装为了系统服务
 
-If you don't know what this is for, please run the uninstaller to remove the system service from the system, and reinstall after restarting.
+如果你不清楚这是做什么的，请运行卸载程序从系统中删除系统服务，重启后重新安装。
 
-### If Uplay/Ubisoft Connect is running; other programs occupy the WebUI port
+### 如果是 Uplay/Ubisoft Connect 正在运行；其它程序占用 WebUI 端口
 
-Please exit first, or [change the WebUI port](./network/http-server.md#change-webui-port)
+请先退出，或者[更改 WebUI 端口](./network/http-server.md#更改-webui-端口)
 
-## Can't connect to the downloader via 127.0.0.1 or localhost
+## 127.0.0.1 或者 localhost 连不上下载器 (ConnectException: null)
 
-This problem is mostly caused by deploying with Docker containers. Using `127.0.0.1` or `localhost` in the container points to the inside of the container, of course it can't connect.
+出现这个问题多半是因为用了 Docker 容器部署导致的。在容器里使用 `127.0.0.1` 或者 `localhost` 指向的是容器内部，当然是连不上的。
 
-Synology users: Container Manager -> Container -> Find the PBH container -> Scroll down, connect using the displayed gateway address.
+群晖用户：Container Manager -> 容器 -> 找到 PBH 的容器 -> 向下滚动，使用显示的网关地址连接。
 
 ![dsm-gateway](./assets/dsm-network-gateway.png)
 
-Other Docker users: execute `sudo docker network inspect bridge` command:
+其它 Docker 用户：执行 `sudo docker network inspect bridge` 命令：
 
 ```json
 "IPAM": {
@@ -39,58 +39,59 @@ Other Docker users: execute `sudo docker network inspect bridge` command:
         }
 ```
 
-Connect using the above Gateway address.
+使用上面的 Gateway 地址连接。
 
-## Unable to download IPDB/GeoIP library / Proxy invalid
+## 无法下载 IPDB/GeoIP 库 / 代理无效
 
-See: [Configure Proxy Server](./network/proxy-server.md)
+参见：[配置代理服务器](./network/proxy-server.md)
 
-## Where is the WebUI management Token?
+## WebUI 管理 Token 在哪里？
 
-See: [Change WebUI Token](./network/http-server.md#change-webui-token)
+参见：[更改 WebUI Token](./network/http-server.md#更改-webui-token)
 
-## What are the disadvantages of Transmission/Why is it abandoned?
+## Transmission 有什么缺点/为什么弃用/废弃了
 
-See: [Abandoning support for Transmission downloader #382](https://github.com/PBH-BTN/PeerBanHelper/issues/382)
+参见：[废弃对 Transmission 下载器的支持 #382](https://github.com/PBH-BTN/PeerBanHelper/issues/382)
 
-## Why does the anti-leech progress checker show progress over 100% (e.g., 102%), is there an error? How can it exceed 100%?
+## 反吸血进度检查器为什么显示进度超过 100% (例如：102%)，是不是出错了？怎么还能超过 100% 的？
 
-No, the progress checker will accumulate the download progress of this IP address on a specific torrent. If the other party appears to regress, disconnect and reconnect with a different port, change PeerID, change Client name and re-download, the downloader will consider this a new client and start calculating download data from scratch (leechers also use this method to bypass leech checks). But for PBH, as long as the other party's IP address remains unchanged (or within a specific range), and the torrent being downloaded has not changed, the download progress will continue to accumulate incrementally, preventing the other party from deceiving the anti-leech check. For example, if a file size is 1000MB, the other party downloading 102% means that the other party has actually downloaded 1020MB of data on this 1000MB size torrent.
+不是的，进度检查器会累加此 IP 地址在特定种子上的下载进度。如果对方出现进度回退、断开更换端口重连、更换 PeerID、更换 Client name 重新下载时，下载器会认为这是一个新客户端，并从头开始计算下载数据（吸血者也使用此手段绕过吸血检查）。但对于 PBH 来说，只要对方 IP 地址未改变（或者处于特定区间内），并且下载的种子未更换的情况下，下载进度会持续增量累积，避免对方欺骗反吸血检查。例如一个文件大小是 1000MB，对方下载 102% 代表对方在这个 1000MB 大小的种子上，实际下载了 1020MB 的数据。
 
-## PBH prompts my downloader "multiple consecutive login failures" and pauses, what should I do?
+## PBH 提示我的下载器 “连续多次登录失败” ，并暂停了该怎么办？
 
-You can click the edit button of the downloader, and then click OK to save. PBH will lift the pause and try to log in again, at which point the reason for the login failure will be displayed. Please troubleshoot according to the reason (for example: network connection problems, whether WebUI is enabled, whether the username and password are correct, etc.). After troubleshooting, save it again to lift the pause.
+您可以点击下载器的编辑按钮，然后直接点击确定保存。PBH 将会解除暂停状态并重新尝试登陆，此时会显示登陆失败的原因。请根据原因进行故障排查（例如：网络连接问题、WebUI 是否启用、用户名密码是否正确等）。排查完了再保存一次成功就解除暂停了。
 
-## What is incremental banning?
+## 什么是增量封禁？
 
-Non-incremental banning: each time a new IP needs to be banned, the entire IP blacklist is directly replaced. This can easily cause the downloader to freeze on qBittorrent.
-Incremental banning: each time a new IP needs to be banned, the banPeer API is used to incrementally add banned IPs; when unbanning, the entire IP blacklist is still directly replaced.
+- 非增量封禁：每次有新 IP 要封禁的时候，直接整个替换 IP 黑名单列表。在 qBittorrent 上容易造成下载器卡死。
+- 增量封禁：每次有新 IP 要封禁的时候，使用 banPeer API 增量添加封禁 IP；在解除封禁的时候，仍然是直接整个替换 IP 黑名单列表。
 
-## What is SSL certificate verification?
+## 什么是验证 SSL 证书？
 
-If the entered address is an HTTPS address and this switch is enabled, the validity of the SSL certificate will be verified. If the certificate is invalid, an error will be reported to ensure security. If it is turned off, all SSL certificates will be trusted.
+如果填写的地址是一个 HTTPS 地址，且此开关启用，则会验证 SSL 证书的有效性。如果证书无效，则报错保证安全。
+如果关闭，则信任所有 SSL 证书。
 
-## What is Basic Auth?
+## 什么是 Basic Auth？
 
-Some tutorials will let you add an extra layer of username and password for security through reverse proxy or Nginx. The feature is that the browser will pop up for verification when accessing:
+有的教程会让你通过反代或者 Nginx 额外添加一层用户名密码保证安全，其特点是浏览器访问的时候会弹框验证：
 
 ![basic-auth](./assets/basic-auth.png)
 
-This is Basic Auth.
+这个就是 Basic Auth。
 
-# In statistical data, why is the ban count higher than the access count?
+## 统计数据中封禁计数比访问计数多？
 
-When a Peer connects and generates traffic, it is counted as one access. If the Peer is banned before generating traffic (for example, during the handshake stage), it is only counted as one ban.
+当一个 Peer 连接**并产生流量**时，计为一次访问。如果 Peer 在产生流量之前就被封禁（比如处于握手阶段），则只记为一次封禁。
 
-## How to permanently ban IP
+## 如何永久封禁 IP
 
-Consider to use [IP Blacklist](./module/ip-address-blocker.md).
+请使用 [IP 黑名单](./module/ip-address-blocker.md)。
 
-## Why can't I edit custom scripts? What is "read-only mode"?
+## 为什么我无法编辑自定义脚本？什么是“只读模式”？
 
-For security reasons, the script editing function will reject requests from the Internet, which can protect your device in the event of a Token leak.
+出于安全原因考虑，脚本编辑功能会拒绝来自互联网的请求，这可以在 Token 泄漏的情况下保护您的设备。
 
-If for some reason you have to edit scripts on the Internet and understand that **hackers can execute any code on your device after a Token leak**, you can add the following `flag` at startup:
+如果您出于一定原因一定要在互联网编辑脚本，并理解 **Token 泄漏后黑客可以在你的设备上执行任何代码**，你可以在启动时添加以下`flag`：
 ```
 java -Dpbh.please-disable-safe-network-environment-check-i-know-this-is-very-dangerous-and-i-may-lose-my-data-and-hacker-may-attack-me-via-this-endpoint-and-steal-my-data-or-destroy-my-computer-i-am-fully-responsible-for-this-action-and-i-will-not-blame-the-developer-for-any-loss ...
 ```

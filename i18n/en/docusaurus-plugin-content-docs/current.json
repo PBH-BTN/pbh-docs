@@ -4,63 +4,63 @@
     "description": "The label for version current"
   },
   "sidebar.tutorialSidebar.category.安装部署": {
-		"message": "Installation",
+    "message": "Installation",
     "description": "The label for category 安装部署 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.安装部署.link.generated-index.description": {
-		"message": "Install and Deploy PeerBanHelper",
+    "message": "Install and Deploy PeerBanHelper",
     "description": "The generated-index page description for category 安装部署 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.下载器配置": {
-		"message": "Configure downloader",
+    "message": "Configure downloader",
     "description": "The label for category 下载器配置 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.下载器配置.link.generated-index.description": {
-		"message": "Connect PeerBanHelper with downloaders",
+    "message": "Connect PeerBanHelper with downloaders",
     "description": "The generated-index page description for category 下载器配置 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.功能模块": {
-		"message": "Modules",
+    "message": "Modules",
     "description": "The label for category 功能模块 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.功能模块.link.generated-index.description": {
-		"message": "Modules of PeerBanHelper",
+    "message": "Modules of PeerBanHelper",
     "description": "The generated-index page description for category 功能模块 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.网络和 HTTP 服务器": {
-		"message": "Network and HTTP Server",
+    "message": "Network and HTTP Server",
     "description": "The label for category 网络和 HTTP 服务器 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.网络和 HTTP 服务器.link.generated-index.description": {
-		"message": "Network and HTTP Server of PeerBanHelper",
+    "message": "Network and HTTP Server of PeerBanHelper",
     "description": "The generated-index page description for category 网络和 HTTP 服务器 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.BTN 威胁防护网络": {
-		"message": "BTN Network",
+    "message": "BTN Network",
     "description": "The label for category BTN 威胁防护网络 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.BTN 威胁防护网络.link.generated-index.description": {
-		"message": "The information network built by you and me.",
+    "message": "The information network built by you and me.",
     "description": "The generated-index page description for category BTN 威胁防护网络 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.平台特定功能": {
-		"message": "Platform-specified function",
+    "message": "Platform-specified function",
     "description": "The label for category 平台特定功能 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.平台特定功能.link.generated-index.description": {
-		"message": "Platform-specified function",
+    "message": "Platform-specified function",
     "description": "The generated-index page description for category 平台特定功能 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.系统挂接": {
-		"message": "Hooks",
+    "message": "Hooks",
     "description": "The label for category 系统挂接 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.系统挂接.link.generated-index.description": {
-		"message": "Connect PeerBanHelper with downloaders",
+    "message": "Connect PeerBanHelper with downloaders",
     "description": "The generated-index page description for category 系统挂接 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.外观和语言": {
-		"message": "Appearance and Language",
+    "message": "Appearance and Language",
     "description": "The label for category 外观和语言 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.外观和语言.link.generated-index.description": {
@@ -68,11 +68,35 @@
     "description": "The generated-index page description for category 外观和语言 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.杂项": {
-		"message": "Misc",
+    "message": "Misc",
     "description": "The label for category 杂项 in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.杂项.link.generated-index.description": {
-		"message": "Others",
+    "message": "Others",
     "description": "The generated-index page description for category 杂项 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Linux": {
+    "message": "Linux",
+    "description": "The label for category Linux in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Synology DSM/群晖": {
+    "message": "Synology DSM/群晖",
+    "description": "The label for category Synology DSM/群晖 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Windows": {
+    "message": "Windows",
+    "description": "The label for category Windows in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.macOS": {
+    "message": "macOS",
+    "description": "The label for category macOS in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Hook": {
+    "message": "Hook",
+    "description": "The label for category Hook in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Hook.link.generated-index.description": {
+    "message": "外部Hook",
+    "description": "The generated-index page description for category Hook in sidebar tutorialSidebar"
   }
 }

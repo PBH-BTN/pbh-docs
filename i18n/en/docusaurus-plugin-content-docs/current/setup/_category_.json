@@ -1,8 +1,8 @@
 {
-	"label": "Installation",
+  "label": "安装部署",
   "position": 2,
   "link": {
     "type": "generated-index",
-		"description": "Install and delpoy PeerBanHelper"
+    "description": "安装和部署 PeerBanHelper"
   }
 }

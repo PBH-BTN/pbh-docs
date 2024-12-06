@@ -4,25 +4,26 @@ sidebar_position: 1
 
 # Docker
 
-Docker is the recommended deployment method for PeerBanHelper on Linux. Using the sample configuration file and CLI commands provided by PBH, PBH will be able to follow the system to start automatically and run in the background (unless stopped manually).
+Docker 部署是 PeerBanHelper 推荐的部署方式。使用 PBH 提供的示例配置文件和 CLI 命令，PBH 将能够跟随系统自动启动，并在后台运行（除非手动停止）。
 
-## Get the version tags
+## 获取版本标签
 
-First visit the [PBH latest version release page](https://github.com/PBH-BTN/PeerBanHelper/releases/latest), find the “Docker Users” section as shown and copy the image tag for backup.
+首先访问 [PBH最新版版本发布页](https://github.com/PBH-BTN/PeerBanHelper/releases/latest)，向下滚动，找到如图所示的 “Docker 用户” 章节，并复制镜像标签备用。
 
 ![image-tag](./assets/docker-tag.png)
 
-**DO NOT** use the latest tag, as it may be cached.
+**不要拉取 latest 镜像，由于镜像缓存的问题，你可能会得到一个远古/开发版本，出问题将无法获得支持。**
 
-## Using Docker Compose
+## 使用 Docker Compose 部署
 
-Create a `docker-compose.yml` file in the directory where you want to store the PBH data, and paste the following content:
+找一个合适的位置创建一个目录作为 PBH 的数据存放位置，并将工作目录切换到此位置。
+保存下面的内容到 docker-compose.yml 文件。
 
 ```yaml
 version: "3.9"
 services:
   peerbanhelper:
-    image: "<tags>"
+    image: "镜像标签"
     restart: unless-stopped
     container_name: "peerbanhelper"
     volumes:
@@ -35,19 +36,15 @@ services:
       - TZ=UTC
 ```
 
-Replace `<tags>` with the image tag you just copied.
+保存退出，执行命令 `sudo docker-compose up` 即可。WebUI 端口将在 9898 开放。
 
-Then run the following command:
+## 使用 Docker CLI 部署
+
+找一个合适的位置创建一个目录作为 PBH 的数据存放位置，并将工作目录切换到此位置。
+执行命令：
 
 ```shell
-docker-compose up -d
+sudo docker run -d --name peerbanhelper --stop-timeout -p 9898:9898 -v ${PWD}/:/app/data/ 将此段文字替换为你刚刚获取的镜像标签
 ```
-The webui will be opened at `9898`.
 
-## Using docker cli
-
-Create a directory as the data storage location for PBH, and switch the working directory to this location.
-```shell
-sudo docker run -d --name peerbanhelper --stop-timeout -p 9898:9898 -v ${PWD}/:/app/data/ <tags>
-```
-The webui will be opened at `9898`.
+WebUI 端口将在 9898 开放。

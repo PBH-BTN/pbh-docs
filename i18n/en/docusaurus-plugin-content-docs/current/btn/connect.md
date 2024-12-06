@@ -1,37 +1,37 @@
-# Connect to BTN
+# 连接 BTN
 
- To participate in the BTN program, you just need to connect the BTN client to the BTN server. This article uses PeerBanHelper as the BTN client and Sparkle as the BTN server for demonstration.
+要参与 BTN 计划，只需要将 BTN 客户端连接到 BTN 服务器就好了。本文使用 PeerBanHelper 作为 BTN 客户端，Sparkle 作为 BTN 服务端进行演示。
 
 ## Sparkle
 
-Sparkle is the official BTN server of PBH-BTN.
+Sparkle 是 PBH-BTN 的官方 BTN 服务器。
 
-### Register an account, create UserApp
+### 注册账号，创建 UserApp
 
-Open the browser [https://btn-prod.ghostchu-services.top](https://btn-prod.ghostchu-services.top) and log in with GitHub authorization, an account will be automatically created.
+浏览器打开 [https://btn-prod.ghostchu-services.top](https://btn-prod.ghostchu-services.top) 并使用 GitHub 授权登录，就会自动创建一个账号。  
 
-Click on the "User Applications" link in the top menu to go to the management page.
+点击顶部菜单的 “用户应用程序” 链接来到管理页面。
 
 ![homepage](./assets/btn-homepage.png)
 
-Click "Create New User Application", enter a note, and then click the button to create.
+点击 “创建新用户应用程序”，输入一个备注，然后点击按钮创建。
 
 ![management](./assets/userapp-management.png)
 
-Now note down the `AppID` and `AppSecret` displayed on the page, because once you close this page, the `AppSecret` will no longer be displayed.
+现在记下页面上显示的 `AppID` 和 `AppSecret`，因为一旦关闭这个页面，`AppSecret` 就不会再显示了。
 
 ![created](./assets/userapp-created.png)
 
-## Join the BTN network on PBH
+## 在 PBH 上加入 BTN 网络
 
-Go to Settings -> Basic Settings option.
+转到 设置 -> 基础设置 选项。
 
 ![btn1](./assets/btn1.jpg)
 
-Scroll down to find BTN settings, open "Enable BTN Module", and fill in the AppID and App Secret obtained above:
+向下滑动找到 BTN 设置，打开 “启用 BTN 模块”，并填写刚刚在上面获取的 AppID 和 App Secret：
 
 ![btn2](./assets/btn2.jpg)
 
-Scroll to the bottom, click the "Save" button, and then restart PeerBanHelper to make it effective.
+滚动到底部，点击“保存”按钮，然后重启 PeerBanHelper 使其生效。
 
 ![btn3](./assets/btn3.jpg)

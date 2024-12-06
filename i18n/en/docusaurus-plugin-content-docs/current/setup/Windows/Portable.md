@@ -1,18 +1,17 @@
 ---
 sidebar_position: 2
 ---
+# 便携版
 
-# Portable
+## 下载和安装
 
-## Install
+从 [GitHub Releases](https://github.com/PBH-BTN/PeerBanHelper/releases/latest) 下载以 `.zip` 结尾的 Windows Portable 压缩包。
+解压即用。
 
-Download the `zip` from [GitHub Releases](https://github.com/PBH-BTN/PeerBanHelper/releases/latest) , unzip it.
+## 升级
 
-## Upgrade
 :::warning
-You must unzip all of the zip, **do not** use overwrite!
+你必须重新解压所有的文件，**不可以**覆盖！**必须重新解压所有内容！**
 :::
 
-
-To upgrade, firstly backup your `data`. Unzip the latest Portable package, then restore your  `data` directory.
-
+要升级 Portable 包，首先将 `data` 数据文件夹挪出工作目录到其他位置。删除原来的文件夹并重新解压新版本的 Portable 包，并将 `data` 数据文件夹挪回原来的位置即可。

@@ -1,32 +1,34 @@
 ---
 sidebar_position: 1
 ---
-# Welcome
 
-Welcome to the documentation of PeerBanHelper. This document will provide you with detailed steps and common issues for PeerBanHelper from installation to configuration.
+# 欢迎
 
-## First Time Using?
+欢迎来到 PeerBanHelper 的文档。本文档将为您详细介绍 PeerBanHelper 从安装到配置的各个步骤和常见问题。
 
-Please select your operating system or deployment method to view the installation tutorial:
+## 首次使用？
 
-| Platform                        | Link                                  |
-| ------------------------------- | ------------------------------------- |
-| Windows Installer               | [View](./setup/Windows/Installer.md)     |
-| Windows Portable                | [View](./setup/Windows/Portable.md)      |
-| Docker                          | [View](./setup/Docker.md)                |
-| Synology DSM(Package)           | [View](./setup/Synology%20DSM/Imnks.md)  |
-| Synology DSM(Container Manager) | [View](./setup/Synology%20DSM/docker.md) |
-| Linux Installer                 | [View](./setup/Linux/LinuxInstall4j.md)  |
-| Linux Manual Install           | [View](./setup/Linux/Manual.md)          |
-| Package Manager (Deb)           | [View](./setup/Linux/Deb.md)             |
+请选择您的操作系统或者部署方式，查看安装教程：
 
-## Need Support?
+| 系统/平台                     | 链接                               |
+| ----------------------------- | ---------------------------------- |
+| Windows 安装版                | [查看](./setup/Windows/Installer.md)         |
+| Windows 便携版                | [查看](./setup/Windows/Portable.md) |
+| Docker                        | [查看](./setup/Docker.md)          |
+| 群晖 DSM（套件）              | [查看](./setup/Synology%20DSM/Imnks.md)           |
+| 群晖 DSM（Container Manager） | [查看](./setup/Synology%20DSM/docker.md)        |
+| Linux 安装版                  | [查看](./setup/Linux/LinuxInstall4j.md)  |
+| Linux 手动部署                | [查看](./setup/Linux/Manual.md)           |
+| 包管理器 (Deb)                | [查看](./setup/Linux/Deb.md)  |
 
-Check out the [FAQ](./faq.md), and if it doesn't help you, feel free to [join the QQ group](https://qm.qq.com/cgi-bin/qm/qr?k=w5as_wH2G1ReUrClreCYhR69XiNCuP65&jump_from=webapi&authKey=EyjMX7Pwc77XLM51V6FEcR7oXnG8fsUbSFqYZ4PPiEpq32vBglJn/jFvpc3LFDhn) or [Telegram](https://t.me/+_t3Nt5GZ6bJmYjBl).
 
-## Open Source
+## 遇到困难，需要帮助？
 
-PeerBanHelper is an open-source software, and you are free to distribute and download PeerBanHelper.
+看看 [常见问题](./faq.md)，如果没有帮到你的话，欢迎[加入 QQ 群](https://qm.qq.com/cgi-bin/qm/qr?k=w5as_wH2G1ReUrClreCYhR69XiNCuP65&jump_from=webapi&authKey=EyjMX7Pwc77XLM51V6FEcR7oXnG8fsUbSFqYZ4PPiEpq32vBglJn/jFvpc3LFDhn)。
 
-However, a few features of PeerBanHelper might require you to enter a license key. You can obtain it by supporting us on [Afdian](https://afdian.com/a/Ghost_chu), or by borrowing a friend's license key (don't worry, you are absolutely allowed to do this 😎).
-All license revenue will be used to maintain the infrastructure of PBH-BTN and to reward our hardworking community maintainers.
+## PeerBanHelper 是一个开源软件
+
+PeerBanHelper 是一个开源软件，您可以自由的传播和免费下载 PeerBanHelper。  
+
+不过，PeerBanHelper 的少数几个功能可能需要您输入许可证。您可以在[爱发电](https://afdian.com/a/Ghost_chu)发电获取，或者找一位朋友借用 Ta 的许可证（别担心，你完全可以这么干😎）。  
+所有的许可证收入都将用于维护 PBH-BTN 的基础设施以及奖励我们辛勤的社区维护者们。

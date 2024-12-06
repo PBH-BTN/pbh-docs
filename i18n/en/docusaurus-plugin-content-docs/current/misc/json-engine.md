@@ -1,7 +1,8 @@
-# JSON Rule Engine
-PBH uses a JSON rule engine to parse rules.
+# JSON 规则引擎
 
-Here is a simple example of a JSON rule:
+PBH 使用 JSON 规则引擎来解析规则。
+
+下面这是一个简单的 JSON 规则示例：
 
 ```yaml
   client-name-blacklist:
@@ -10,57 +11,57 @@ Here is a simple example of a JSON rule:
       - '{"method":"CONTAINS","content":"xunlei"}'
 ```
 
-Its function is to ban any Peer with the keyword Xunlei in the ClientName.
+它的作用是封禁任何 ClientName 中带有 Xunlei 关键字的 Peer。
 
-## JSON Rule Engine - Matching Modes
+## JSON 规则引擎 - 匹配模式
 
-All rules must specify a matching mode `method`. Here is a list of matching modes currently supported by PBH, all matching modes ignore case:
+所有的规则都必须指定一个匹配模式 `method`，以下是目前 PBH 支持的匹配模式列表，所有匹配模式检查时均忽略大小写：
 
-* `STARTS_WITH` - Matches the beginning string, the given parameter must start with the specified string
-  * Available extended parameters:
-    * `content` The beginning string to check
-* `ENDS_WITH` - Matches the ending string, the given parameter must end with the specified string
-  * Available extended parameters:
-    * `content` The ending string to check
-* `CONTAINS` - Matches whether it contains a substring, the given parameter must contain the specified string
-  * Available extended parameters:
-    * `content` The substring to check
-* `EQUALS` - Exact match, the given parameter must be exactly the same as the content of the matching template
-  * Available extended parameters:
-    * `content` Exact match template
-* `LENGTH` - Matches the length of the string, the given parameter must be within the specified range
-  * Available extended parameters:
-    * `min` Minimum length
-    * `max` Maximum length
-* `REGEX` - Matches regular expressions, the given parameter must be hit by the provided regular expression
-  * Available extended parameters
-    * `content` Regular expression
+* `STARTS_WITH` - 匹配开头字符串，给定参数必须以指定字符串打头
+  * 可用扩展参数：
+    * `content` 需要检查的开头字符串
+* `ENDS_WITH` - 匹配结尾字符串，给定参数必须以指定字符串结束
+  * 可用扩展参数：
+    * `content` 需要检查的结尾字符串
+* `CONTAINS` - 匹配是否包含子串，给定参数必须包含指定字符串
+  * 可用扩展参数：
+    * `content` 需要检查的子串
+* `EQUALS` - 完全匹配，给定参数必须与匹配模板的内容完全一致
+  * 可用扩展参数：
+    * `content` 完全匹配模板
+* `LENGTH` - 匹配字符串长度，给定参数必须在指定区间内
+  * 可用扩展参数：
+    * `min` 最小长度
+    * `max` 最大长度
+* `REGEX` - 匹配正则表达式，给定参数必须可被提供的正则表达式命中
+  * 可用扩展参数
+    * `content` 正则表达式
 
-## Condition Control
+## 条件控制
 
-Each rule execution will choose one of `TRUE`, `FALSE` and `DEFAULT` as the return value.
+每个规则执行后都会在 `TRUE`, `FALSE` 和 `DEFAULT` 三个结果中选择一个作为返回值。
 
-For **if conditions**, `TRUE` and `DEFAULT` both return true results, `FALSE` returns false results.
-For **ban rules**, `TRUE` will ban Peer, `FALSE` will **force** Peer to pass (priority is higher than ban), and `DEFAULT` will keep default, do nothing.
+对于 **if条件** 来说，`TRUE` 和 `DEFAULT` 都返回真结果，`FALSE` 返回假结果。  
+对于 **封禁规则** 来说，`TRUE` 会封禁 Peer，`FALSE` 会**强制**放行 Peer（优先级比封禁更高），而 `DEFAULT` 则会保持默认，什么都不做。
 
-For if conditions, if the user does not explicitly specify, always return TRUE, so that the condition is true, execute the rule.
-For ban rules, if the user does not explicitly specify, the hit behavior always returns TRUE, so that the condition is true, ban Peer; while the miss behavior always returns DEFAULT, keep default, do not do extra operations.
+对于 if 条件，如果用户没有明确指定，则总是返回 TRUE，使得条件为真，执行规则。  
+对于 封禁规则，如果用户没有明确指定，则 hit 行为总是返回 TRUE，使得条件为真，封禁 Peer；而 miss 行为总是返回 DEFAULT，保持默认，不做额外操作。
 
-### Custom Return Types
+### 自定返回类型
 
-PBH's JSON rule engine provides two fields, `hit` and `miss`. By default, they are `TRUE` and `DEFAULT`, here is an example:
+PBH 的 JSON 规则引擎提供了两个字段，分别是 `hit` 和 `miss`。默认情况下它们分别为 `TRUE` 和 `DEFAULT`，下面是一个示例：
 
 ```json
 {"method":"CONTAINS","content":"xunlei 0019","hit": "FALSE"}
 ```
 
-This rule specifies that when the rule is hit, return `FALSE`, so that Xunlei 0019 is forced to pass (the priority of pass is higher than ban).
+这段规则指定了在命中规则时，返回 `FALSE`，从而使得 迅雷 0019 被强制放行（放行的优先级要比封禁更高）。
 
-### if Control
+### if 控制
 
-PBH's JSON rule engine allows you to do if nesting. As mentioned before, each rule will return a logical value, which can also be parsed by the if field. When the if field of a rule is parsed as `FALSE`, this rule will not be executed.
+PBH 的 JSON 规则引擎允许您进行 if 嵌套。正如之前所说，每个规则都会返回一个逻辑值，其值也可被 if 字段解析。当一个规则的 if 字段被解析为 `FALSE` 时，这条规则则不会被执行。
 
-Here is an example, through if nesting to achieve the ban of Xunlei, but not ban Xunlei 0019:
+下面是一个实例，通过 if 嵌套来实现在封禁迅雷的同时，不封禁迅雷 0019：
 
 ```json
 {
@@ -74,21 +75,18 @@ Here is an example, through if nesting to achieve the ban of Xunlei, but not ban
 }
 ```
 
-In this example, although the top-level rule requires banning all clients containing the xunlei keyword, the user provides the if field, so PBH first checks whether the result of the if field is true. As you can see, when the secondary rule inside if is hit, it returns the `FALSE` logical value, so the execution result of the if field is false, and this ban command is not executed this time.
+在此示例中，虽然顶层规则要求封禁所有包含 xunlei 关键字的客户端，但用户提供了 if 字段，因此 PBH 首先检查 if 字段的结果是否为真。可以看到，if 内的二级规则被命中时返回了 `FALSE` 逻辑值，因此 if 字段的执行结果为假，此命令本次禁用不执行。
 
-### if Nesting
+### if 嵌套
 
-Although the if field inside the if rule can nest another rule, it is absolutely readability hell. Try to avoid doing this!
+尽管 if 的规则里面的 if 字段还可以嵌套另一个规则，但绝对是可读性地狱。尽量避免这么干！
 
-### Whitelist Mode
+### 白名单模式
 
-:::note
-This is an example, do not use the whitelist function in practice, because malicious Peer will disguise themselves
-:::
+新的 JSON 规则引擎允许用户编写白名单模式规则，操作方式很简单：
 
-The new JSON rule engine allows users to write whitelist mode rules, the operation is simple:
+首先添加一个正则表达式，封禁所有客户端：
 
-First add a regular expression to ban all clients:
 ```yaml
   client-name-blacklist:
     enabled: true
@@ -96,7 +94,7 @@ First add a regular expression to ban all clients:
     - '{"method": "REGEX", "content": "*", "hit": "TRUE"}'
 ```
 
-Then we force each client you want to pass one by one, such as qBittorrent:
+然后我们逐个强制放行你想要的客户端，比如说 qBittorrent：
 
 ```yaml
   client-name-blacklist:
@@ -106,4 +104,4 @@ Then we force each client you want to pass one by one, such as qBittorrent:
     - '{"method": "CONTAINS", "content": "qbittorrent", "hit": "FALSE"}'
 ```
 
-This achieves the effect of a whitelist.
+这样就达到了白名单的效果。(请注意：这是个示例，实践中不要使用白名单功能，因为恶意 Peer 会伪装自己)

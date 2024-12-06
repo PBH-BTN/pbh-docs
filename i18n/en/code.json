@@ -340,29 +340,29 @@
   "theme.tags.tagsPageTitle": {
     "message": "Tags",
     "description": "The title of the tag list page"
-	},
-	"功能强大": {
-		"message": "Powerful"
-	},
-	"10 余个功能模块，提供对恶意 IP/Peer 的全面检测，高度可定制。": {
-		"message": "10 + Modules, providing comprehensive detection of malicious IP/Peer, highly customizable."
-	},
-	"开箱即用": {
-		"message": "Out of the box"
-	},
-	"跟随教程从安装到配置，整个过程只需不到 20 分钟。": {
-		"message": "Follow the tutorial from installation to configuration, the whole process takes less than 20 minutes."
-	},
-	"兼容多种下载器": {
-		"message": "Compatible with multiple downloaders"
-	},
-	"完全支持 qBittorrent, Deluge 和 BiglyBT/Azuerus/Vuze。": {
-		"message": "Fully supports qBittorrent, Deluge and BiglyBT/Azuerus/Vuze."
-	},
-	"立刻开始了解 PeerBanHelper": {
-		"message": "Get started with PeerBanHelper"
-	},
-	"自动封禁不受欢迎、吸血和异常的 BT 客户端，并支持自定义规则": {
-		"message": "Automatically ban unwanted, leeching and abnormal BT clients, and support custom rules"
+  },
+  "功能强大": {
+    "message": "Powerful"
+  },
+  "10 余个功能模块，提供对恶意 IP/Peer 的全面检测，高度可定制。": {
+    "message": "10 + Modules, providing comprehensive detection of malicious IP/Peer, highly customizable."
+  },
+  "开箱即用": {
+    "message": "Out of the box"
+  },
+  "跟随教程从安装到配置，整个过程只需不到 20 分钟。": {
+    "message": "Follow the tutorial from installation to configuration, the whole process takes less than 20 minutes."
+  },
+  "兼容多种下载器": {
+    "message": "Compatible with multiple downloaders"
+  },
+  "完全支持 qBittorrent, Deluge 和 BiglyBT/Azuerus/Vuze。": {
+    "message": "Fully supports qBittorrent, Deluge and BiglyBT/Azuerus/Vuze."
+  },
+  "立刻开始了解 PeerBanHelper": {
+    "message": "Get started with PeerBanHelper"
+  },
+  "自动封禁不受欢迎、吸血和异常的 BT 客户端，并支持自定义规则": {
+    "message": "Automatically ban unwanted, leeching and abnormal BT clients, and support custom rules"
   }
 }
