@@ -11,9 +11,9 @@ Open [GitHub Releases](https://github.com/PBH-BTN/PeerBanHelper/releases/latest)
 
 Among them, one has a `nojava` tag, and the other does not. If you are unfamiliar with what Java is, please choose the download **without** the nojava tag.
 
-Then, you will also notice the difference between `amd64` and `aarch64`:
-* For most users, please download the `.exe` installer with the `amd64` tag.
-* If you are an unfortunate user who has purchased a Windows notebook with a Qualcomm Snapdragon CPU: please download the `.exe` installer with the `aarch64` tag.
+Then, you will also notice the difference between `x64` and `arm64`:
+* For most users, please download the `.exe` installer with the `x64` tag.
+* If you are an unfortunate user who has purchased a Windows notebook with a Qualcomm Snapdragon CPU: please download the `.exe` installer with the `arm64` tag.
 
 ### Boot Startup
 
