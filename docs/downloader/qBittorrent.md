@@ -10,6 +10,12 @@ sidebar_position: 1
 
 :::
 
+:::warning
+
+PeerBanHelper 仅兼容 qBittorrent `v4.5.0` 及以上版本，不兼容 XDown，即使你在不合要求的下载器上成功运行 PeerBanHelper，我们也不会提供任何支持。
+
+:::
+
 PeerBanHelper 利用 qBittorrent 的 WebAPI 与 qBittorrent 进行交互。本章将详细指导您如何为 qBittorrent 启用 WebUI，并将其与 PeerBanHelper 成功连接。对于在 Linux 和 Docker 环境中使用 qBittorrent 的用户，如果您已经配置好了 WebUI，可以跳过前面的相关步骤。
 
 ## 启用 WebUI
@@ -47,7 +53,7 @@ PeerBanHelper 利用 qBittorrent 的 WebAPI 与 qBittorrent 进行交互。本�
 
 :::tip
 
-在 PBH `v7.2.0` 及以上版本，下载器连接到 PBH 时，PBH 会自动关闭“允许来自同一 IP 地址的多个连接”选项，如果你使用的版本正确，则无需手动配置此选项。
+在 PeerBanHelper `v7.2.0` 及以上版本，下载器连接到 PeerBanHelper 时，PeerBanHelper 会自动关闭“允许来自同一 IP 地址的多个连接”选项，如果你使用的版本正确，则无需手动配置此选项。
 
 :::
 

@@ -10,6 +10,12 @@ All downloaders that deploy in Docker MUST use host network mode to make sure do
 
 :::
 
+:::warning
+
+The PeerBanHelper is only compatible with qBittorrent versions `v4.5.0` and above, and it is not compatible with XDown. Evenif you manage to run PeerBanHelper successfully on an incompatible downloader, we will not provide any support for such configurations.
+
+:::
+
 PeerBanHelper leverages the WebAPI of qBittorrent to interact with it. This chapter will guide you on how to enable the WebUI for qBittorrent and successfully connect it to PeerBanHelper. For users using qBittorrent in Linux or Docker environments, if your WebUI is already configured, you can skip through the relevant steps.
 
 ## Enable WebUI
