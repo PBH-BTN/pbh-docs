@@ -12,7 +12,7 @@ All downloaders that deploy in Docker MUST use host network mode to make sure do
 
 :::warning
 
-The PeerBanHelper is only compatible with qBittorrent versions `v4.5.0` and above, and it is not compatible with XDown. Evenif you manage to run PeerBanHelper successfully on an incompatible downloader, we will not provide any support for such configurations.
+The PeerBanHelper is only compatible with qBittorrent versions `v4.5.0` and higher, and it is not compatible with XDown. Evenif you manage to run PeerBanHelper successfully on an incompatible downloader, we will not provide any support for such configurations.
 
 :::
 

@@ -12,7 +12,7 @@ sidebar_position: 1
 
 :::warning
 
-PeerBanHelper 仅兼容 qBittorrent `v4.5.0` 及以上版本，不兼容 XDown，即使你在不合要求的下载器上成功运行 PeerBanHelper，我们也不会提供任何支持。
+PeerBanHelper 仅兼容 qBittorrent `v4.5.0` 或更高版本，不兼容 XDown，即使你在不合要求的下载器上成功运行 PeerBanHelper，我们也不会提供任何支持。
 
 :::
 
