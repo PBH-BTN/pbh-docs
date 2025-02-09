@@ -12,7 +12,7 @@ The rules use the [JSON Rules Engine](../misc/json-engine.md) syntax. You can co
 ![Client Name](./assets/client-name.png)
 
 ```yaml
-  # ClientName blacklist
+  # 客户端名称封禁
   # ClientName blacklist
   client-name-blacklist:
     enabled: true
@@ -26,21 +26,18 @@ The rules use the [JSON Rules Engine](../misc/json-engine.md) syntax. You can co
       - '{"method":"STARTS_WITH","content":"dt "}'
       - '{"method":"STARTS_WITH","content":"xm/torrent"}'
       - '{"method":"STARTS_WITH","content":"xm "}'
-      - '{"method":"STARTS_WITH","content":"go.torrent"}'
       - '{"method":"STARTS_WITH","content":"taipei-torrent"}'
       - '{"method":"CONTAINS","content":"rain 0.0.0"}'
       - '{"method":"CONTAINS","content":"gopeed dev"}'
       - '{"method":"STARTS_WITH","content":"xfplay"}'
       - '{"method":"CONTAINS","content":"StellarPlayer"}'
-      - '{"method":"CONTAINS","content":"SP "}' # Do not delete trailing space
+      - '{"method":"CONTAINS","content":"SP "}' # 不要删除尾随空格
       - '{"method":"CONTAINS","content":"flashget"}'
       - '{"method":"CONTAINS","content":"tudou"}'
       - '{"method":"CONTAINS","content":"torrentstorm"}'
       - '{"method":"CONTAINS","content":"qqdownload"}'
-      - '{"method":"CONTAINS","content":"anacrolix/torrent"}'
       - '{"method":"STARTS_WITH","content":"qbittorrent/3.3.15"}'
       - '{"method":"STARTS_WITH","content":"github.com/thank423/trafficconsume"}'
       - '{"method":"STARTS_WITH","content":"ޭ__"}' # 0xde-0xad-0xbe-0xef
-      - '{"method":"STARTS_WITH","content":"ljyun.cn/hangzhou/monitoring"}'
-      - '{"method":"STARTS_WITH","content":"taipei-torrent"}'
       - '{"method":"STARTS_WITH","content":"-XL"}'
+```

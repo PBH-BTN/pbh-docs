@@ -63,13 +63,13 @@ Currently, this setting can only be edited through the configuration file.
 ## Configuration File
 
 ```yaml
-  # IP address/port blacklist
+  # IP 地址/端口 封禁
   # IP address/port blacklist
   ip-address-blocker:
     enabled: true
-    # Ban duration in milliseconds, use default to follow global settings
+    # 封禁时间，单位：毫秒，使用 default 则跟随全局设置
     ban-duration: 259200000
-    # Banning IP address, supports CIDR, syntax example:
+    # 按 IP 封禁，支持 CIDR，其语法大致如下：
     # Banning IP address, support CIDR, syntax example:
     # ::/64
     # a:b:c:d::a:b/64
@@ -80,40 +80,47 @@ Currently, this setting can only be edited through the configuration file.
       - "0.0.0.0"
     #- 8.8.8.8
     #- 9.9.9.9
+    # 按端口封禁
     # Banning ports
     ports:
       - 0
     #- 2003
+    # 按 ASN（自治系统代码）封禁（需要配置 GeoIP-ASN 数据库才能工作！）
     # Banning ASN (Require config GeoIP-ASN database)
     asns:
       - "0"
-    #  - 0 # Network ASN good
+    #  - 0 # 网络 ASN 号
+    # 按国家或地区封禁（需要配置 GeoIP-City 数据库才能工作！）
     # Banning as Country/Region code
     regions:
       - "0"
+    # 按城市/区/县封禁
+    # 默认使用 Maxmind 名称，如果成功加载 GeoCN 数据库，则对在 GeoCN 数据库中的 IP 地址使用 GeoCN 写法
     # Banning as city name
     # Use Maxmind name as default, or use GeoCN name for record exists in GeoCN if GeoCN is loaded
     cities:
       - "示例海南"
-    #  - ISO_CODE Enter country/region ISO code, case sensitive, like: CN, UK, TW, HK, JP, etc.
+    #  - ISO_CODE 输入国家或地区的 ISO 代码，大小写敏感，如：CN, UK, TW, HK, JP 等
     #  - ISO_CODE Enter the ISO code, case sensitive (E.g. CN, UK, TW, HK, JP, etc.)
+    # 按网络类型封禁（仅中国大陆地区 IP 地址有效）
     # Banning as net type (only works for China Mainland IPs, Require config GeoIP database)
     net-type:
-      # Broadband
+      # 宽带
       wideband: false
-      # Base station
+      # 基站
       base-station: false
-      # Government and enterprise line
+      # 政企专线
       government-and-enterprise-line: false
-      # Business platform
+      # 业务平台
       business-platform: false
-      # Backbone network
+      # 骨干网
       backbone-network: false
-      # IP private network
+      # IP 专网
       ip-private-network: false
-      # Internet cafe
+      # 网吧
       internet-cafe: false
-      # IoT
+      # 物联网
       iot: false
-      # Data center
+      # 数据中心
       datacenter: false
+```

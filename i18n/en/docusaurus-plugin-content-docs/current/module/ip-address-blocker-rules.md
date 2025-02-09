@@ -26,24 +26,28 @@ PeerBanHelper can load an IP rule set composed of the following:
 ## Configuration File
 
 ```yaml
-  # Subscription Rules
+  # 订阅规则
   # Rules Subscription
-  # It is recommended to configure this module on WebUI
+  # 建议在 WebUI 上配置
   # Recommended configure this module on WebUI
   ip-address-blocker-rules:
     enabled: true
-    # Ban duration in milliseconds, use default to follow global settings
+    # 封禁时间，单位：毫秒，使用 default 则跟随全局设置
     ban-duration: 259200000
-    # Check interval
-    check-interval: 14400000 # Checks every 4 hours in milliseconds; Timeunit: ms
-    # Rules list
+    # 检查间隔
+    check-interval: 14400000 # 4小时检查一次 毫秒; Timeunit: ms
+    # 规则列表 - Rules list
     rules:
-      # Rule ID (any)
+      # 规则ID（任意） - Rule Id(any)
       all-in-one:
-        # Enable?
+        # 是否启用 - Enable?
         enabled: true
-        # Display Name
+        # 显示名称 - Display Name
         name: all-in-one
-        # Rule file subscription address
+        # 规则文件订阅地址 - Subscription Address
         url: https://bcr.pbh-btn.ghorg.ghostchu-services.top/combine/all.txt
+      tor-exit-nodes:
+        enabled: false
+        name: Tor Exit Nodes
+        url: https://cdn.jsdelivr.net/gh/7c/torfilter/lists/txt/torfilter-1d-flat.txt
 ```
