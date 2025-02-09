@@ -27,7 +27,6 @@ ClientName 是 BitTorrent 的一个[扩展协议](https://www.bittorrent.org/bep
       - '{"method":"STARTS_WITH","content":"dt "}'
       - '{"method":"STARTS_WITH","content":"xm/torrent"}'
       - '{"method":"STARTS_WITH","content":"xm "}'
-      - '{"method":"STARTS_WITH","content":"go.torrent"}'
       - '{"method":"STARTS_WITH","content":"taipei-torrent"}'
       - '{"method":"CONTAINS","content":"rain 0.0.0"}'
       - '{"method":"CONTAINS","content":"gopeed dev"}'
@@ -38,11 +37,8 @@ ClientName 是 BitTorrent 的一个[扩展协议](https://www.bittorrent.org/bep
       - '{"method":"CONTAINS","content":"tudou"}'
       - '{"method":"CONTAINS","content":"torrentstorm"}'
       - '{"method":"CONTAINS","content":"qqdownload"}'
-      - '{"method":"CONTAINS","content":"anacrolix/torrent"}'
       - '{"method":"STARTS_WITH","content":"qbittorrent/3.3.15"}'
       - '{"method":"STARTS_WITH","content":"github.com/thank423/trafficconsume"}'
       - '{"method":"STARTS_WITH","content":"ޭ__"}' # 0xde-0xad-0xbe-0xef
-      - '{"method":"STARTS_WITH","content":"ljyun.cn/hangzhou/monitoring"}'
-      - '{"method":"STARTS_WITH","content":"taipei-torrent"}'
       - '{"method":"STARTS_WITH","content":"-XL"}'
 ```

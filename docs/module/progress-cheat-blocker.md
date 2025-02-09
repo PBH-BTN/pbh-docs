@@ -82,8 +82,8 @@ PeerBanHelper 会根据下载器数据、本地记录数据和 Peer 汇报数据
     block-excessive-clients: true
     # 过量下载计算阈值
     # Calculation threshold
-    # 计算方式是： 是否过量下载 = 上传总大小 > (种子总大小 * excessive-threshold)
-    # IsExcessive = uploaded > (torrent_size * excessive-threshold)
+    # 计算方式是： 是否过量下载 = 上传总大小 > (种子总大小 * excessive_threshold)
+    # IsExcessive = uploaded > (torrent_size * excessive_threshold)
     excessive-threshold: 1.5
     # IPV4 前缀长度，前缀相同的 IP 都被视为同一个用户
     # IPV4 prefix length, same prefix will trick as a same user
@@ -110,6 +110,32 @@ PeerBanHelper 会根据下载器数据、本地记录数据和 Peer 汇报数据
     # 单位：ms 默认值：1209600000 （14 天）
     # Time unit: ms, default: 1209600000 (14 days)
     persist-duration: 1209600000
+    # 封禁前最长等待时间
+    # Max duration before ban
+    # 有时由于下载器网络原因，Peer 可能无法及时同步其进度信息
+    # Sometimes due the network issue, the peer may cannot sync the progress information on time
+    # 当 Peer 达到封禁阈值后开始计时，如果 Peer 未在给定时间内更新自己的进度到正常水平，则将被封禁
+    # When a Peer reached ban condition, the timer will start and Peer will be banned after timer timed out if Peer's progress not update to excepted value on time
+    # 注意：这不适用于进度回退和过量下载
+    # Note: This not suitable for progress rewind or over-download
+    max-wait-duration: 30000
+    # 快速 PCB 测试启动阈值
+    # Fast PCB testing start threshold
+    # 此选项将允许 PCB 在 Peer 下载指定量的数据后，将其短暂的封禁一段时间以便断开其连接
+    # This option will allow PCB ban the Peer from downloader for disconnect it
+    # 这有助于快速预热进度重置检查
+    # Can heat up progress reset check quickly
+    # 设置为 -1 以禁用
+    # Set to -1 for disable it
+    # 百分比为浮点百分比，0.5=50%; 1.0 = 100%
+    # Percentage in float, 0.5=50%; 1.0 = 100%
+    fast-pcb-test-percentage: 0.1
+    # 快速 PCB 测试断开连接持续时间
+    # The disconnect duration for fast PCB test
+    # 更长的时间更容易使得恶意吸血者的临时记录从 LRU 缓存中逐出，以便 PBH 识别它；但也会影响正常下载者的速度和体验
+    # The longer time can lead cheaters temp records be invalid and remove from LRU cache, then PBH can detect it; but it can also affect the normal peers speed and experience
+    # 时间单位（Time Unit）: 毫秒（ms）
+    fast-pcb-test-block-duration: 15000
 ```
 
 ## 缺陷

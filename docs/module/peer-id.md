@@ -48,8 +48,6 @@ PeerID 是由 Peer 主动汇报的（可以被随意修改），因此不能作�
       - '{"method":"STARTS_WITH","content":"-hp"}'
       - '{"method":"STARTS_WITH","content":"-xm"}'
       - '{"method":"STARTS_WITH","content":"-dt"}'
-      - '{"method":"STARTS_WITH","content":"-gt0002"}'
-      - '{"method":"STARTS_WITH","content":"-gt0003"}'
       - '{"method":"CONTAINS","content":"-rn0.0.0"}'
       - '{"method":"STARTS_WITH","content":"-sd"}'
       - '{"method":"STARTS_WITH","content":"-xf"}'
@@ -61,5 +59,4 @@ PeerID 是由 Peer 主动汇报的（可以被随意修改），因此不能作�
       - '{"method":"STARTS_WITH","content":"-tt"}'
       - '{"method":"STARTS_WITH","content":"-nx"}'
       - '{"method":"CONTAINS","content":"cacao"}'
-
 ```

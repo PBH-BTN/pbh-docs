@@ -46,4 +46,8 @@ PeerBanHelper 可以加载由以下内容组成的 IP 规则集：
         name: all-in-one
         # 规则文件订阅地址 - Subscription Address
         url: https://bcr.pbh-btn.ghorg.ghostchu-services.top/combine/all.txt
+      tor-exit-nodes:
+        enabled: false
+        name: Tor Exit Nodes
+        url: https://cdn.jsdelivr.net/gh/7c/torfilter/lists/txt/torfilter-1d-flat.txt
 ```
