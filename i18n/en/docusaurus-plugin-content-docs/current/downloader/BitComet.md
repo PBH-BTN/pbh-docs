@@ -10,6 +10,12 @@ All downloaders that deploy in Docker MUST use host network mode to make sure do
 
 :::
 
+:::warning
+
+The PeerBanHelper is only compatible with BitComet versions `v2.10 Beta6 [20240928]` and higher. Even if you manage to run PeerBanHelper successfully on an incompatible downloader, we will not provide any support for such configurations.
+
+:::
+
 PeerBanHelper interacts with BitComet using the BitComet WebAPI. This chapter will guide you on enabling the WebAPI for BitComet and connecting PeerBanHelper to BitComet.  
 
 ## Notice

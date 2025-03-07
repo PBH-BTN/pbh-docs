@@ -10,6 +10,12 @@ sidebar_position: 5
 
 :::
 
+:::warning
+
+PeerBanHelper 仅兼容 BitComet `v2.10 Beta6 [20240928]` 或更高版本。即使你在不合要求的下载器上成功运行 PeerBanHelper，我们也不会提供任何支持。
+
+:::
+
 PeerBanHelper 利用 BitComet 的 WebAPI 与 BitComet 进行交互。本章将指导您如何为 BitComet 启用 WebAPI，并将其与 PeerBanHelper 连接。
 
 ## 注意事项

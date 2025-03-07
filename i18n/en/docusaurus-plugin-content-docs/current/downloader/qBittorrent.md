@@ -10,6 +10,12 @@ All downloaders that deploy in Docker MUST use host network mode to make sure do
 
 :::
 
+:::warning
+
+The PeerBanHelper is only compatible with qBittorrent versions `v4.5.0` and higher, and it is not compatible with XDown. Even if you manage to run PeerBanHelper successfully on an incompatible downloader, we will not provide any support for such configurations.
+
+:::
+
 PeerBanHelper leverages the WebAPI of qBittorrent to interact with it. This chapter will guide you on how to enable the WebUI for qBittorrent and successfully connect it to PeerBanHelper. For users using qBittorrent in Linux or Docker environments, if your WebUI is already configured, you can skip through the relevant steps.
 
 ## Enable WebUI
@@ -27,10 +33,12 @@ Next, follow these steps:
 5. Finally, click on the bottom-right button to apply the settings.
 
 :::warning
+
 **Security Tip**
 - Set strong passwords to protect your qBittorrent.
 - If you only use it locally, consider restricting access to `127.0.0.1`.
 - Ensure that your firewall is configured correctly and only allows necessary ports.
+
 :::
 
 ![step2](assets/qBittorrent-step2.png)
@@ -43,7 +51,11 @@ In addition to enabling WebUI, some configuration adjustments are needed for Pee
 2. Uncheck the box next to "Resolve User Hostnames".
 3. Scroll down to the "libtorrent-related" section and uncheck the option titled "Allow multiple connections from the same IP address". 
 :::tip
-Starting with version `v7.2.0`, qBittorrent will automatically disable the "Allow multiple connections from the same IP address" option when a downloader connects to PBH, so you needn't to manually configure it if your version is correct.
+
+From version `v7.2.0` and above, when a downloader connects to PBH, the option "Allow multiple connections from
+the same IP address" will automatically be disabled by qBittorrent. Therefore, if you are using the correct
+version, there is no need for manual configuration of this setting.
+
 :::
 
 ![step3](assets/qBittorrent-step3.png)
