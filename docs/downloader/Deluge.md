@@ -14,7 +14,7 @@ PeerBanHelper 将通过 Deluge 的插件系统连接到 Deluge。
 
 ## 安装 PBH-Adapter-Deluge 适配器
 
-首先需要下载 Deluge 适配器：[PBH-BTN/PBH-Adapter-Deluge](releases)，请选择与您的 Deluge 版本匹配的插件 Egg 文件进行下载，如无特殊说明，请下载最新版本。
+首先需要下载 Deluge 适配器：[PBH-BTN/PBH-Adapter-Deluge](https://github.com/PBH-BTN/PBH-Adapter-Deluge/releases)，请选择与您的 Deluge 版本匹配的插件 Egg 文件进行下载，如无特殊说明，请下载最新版本。
 
 ### Windows 系统安装步骤
 
