@@ -32,7 +32,7 @@ PeerBanHelper 将通过 Deluge 的插件系统连接到 Deluge。
 
 4. 选择后，插件应该就会安装完成，返回插件菜单，您应该已经看到了 PeerBanHelper 插件，请在前面的复选框中打勾启用，并点击"关闭"保存退出。
 
-   ![ste4p](assets/Deluge-step4.png)
+   ![step4](assets/Deluge-step4.png)
 
 ### Linux 系统安装步骤
 

@@ -3,7 +3,7 @@
 一些 PBH 提供的统计功能需要此模块开启。
 启用主动监测后，PBH 会将每次扫描下载器获取的所有 Peers 数据全部存入/更新到数据库中，以提供可视化统计数据和流量告警服务。
 :::warning
-不建议 EMMC 芯片和 SD 卡用户启用此功能。除了会影响性能，还可能加快闪存芯片磨损。
+不建议 eMMC 芯片和 SD 卡用户启用此功能。除了会影响性能，还可能加快闪存芯片磨损。
 :::
 Transmission, BitComet 用户因 API 限制可能缺失部分数据。
 
@@ -55,8 +55,8 @@ Transmission, BitComet 用户因 API 限制可能缺失部分数据。
   # Allow PBH records all data that fetched from downloader and save them into SQLite database
   # 其产生的数据可被其它模块调用（如：生成图表报表等）
   # The data produced by this module can be re-used by other modules
-  # 注意：使用 SD 卡或者 EMMC 的设备【不建议】开启此功能，此功能对于存储设备的读写压力较高，可能加快 Flash 存储芯片磨损或导致存储设备过热
-  # NOTE: It is not recommended to enable this module if PBH running on SDCard or EMMC Flash chip.
+  # 注意：使用 SD 卡或者 eMMC 的设备【不建议】开启此功能，此功能对于存储设备的读写压力较高，可能加快 Flash 存储芯片磨损或导致存储设备过热
+  # NOTE: It is not recommended to enable this module if PBH running on SDCard or eMMC Flash chip.
   # 另请注意：此功能可能还会导致本地数据库文件大小快速变大，不建议在存储空间不充足的存储设备上使用此功能
   # NOTE: This may lead database size increase quickly
   active-monitoring:
