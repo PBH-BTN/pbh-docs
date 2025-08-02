@@ -1,6 +1,6 @@
 # Automatic Range Ban
 
-Due to the latency of the [Progress Checker](./progress-cheat-blocker.md), some traffic from the IP is already leached before the user bans it. This feature is designed to help users stop losses in a timely manner.  
+Due to the latency of the [Progress Checker](./progress-cheat-blocker.md), some traffic from the IP is already leached before the user bans it. This feature is designed to help users stop losses in a timely manner.
 When an IP is banned, ARB will scan all connected peers. If any peer's IP address is in the same subnet as the banned IP, that peer will be chain-banned.
 
 ## Configuration File

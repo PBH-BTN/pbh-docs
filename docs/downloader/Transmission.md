@@ -26,10 +26,10 @@ sidebar_position: 999
 
 ## 配置 PeerBanHelper 屏蔽列表提供端点
 
-由于 Transmission 的封禁列表更新方式是主动拉取，而非 PeerBanHelper 向其推送。因此你需要配置一个 “屏蔽列表提供端点”，向 Transmission 提供 HTTP 服务来提供封禁列表。  
+由于 Transmission 的封禁列表更新方式是主动拉取，而非 PeerBanHelper 向其推送。因此你需要配置一个 “屏蔽列表提供端点”，向 Transmission 提供 HTTP 服务来提供封禁列表。
 不过别担心，PeerBanHelper 已经帮你完成了这个任务。PBH 的 WebUI 的 HTTP 服务器也可以兼任这个角色。这样当封禁列表有任何变化时，PeerBanHelper 就会自动更新并通知 Transmission 拉取。
 
-你需要打开 PeerBanHelper 的 WebUI 并转到 “设置 -> 基础设置 -> WebUI -> 前缀”，将其设置为一个在 Transmission 所在位置可访问 PeerBanHelper WebUI 的地址。  
+你需要打开 PeerBanHelper 的 WebUI 并转到 “设置 -> 基础设置 -> WebUI -> 前缀”，将其设置为一个在 Transmission 所在位置可访问 PeerBanHelper WebUI 的地址。
 
 ![step3](assets/transmission-config-prefix.png)
 
@@ -45,7 +45,7 @@ http://127.0.0.1:<PBHWebUI端口>
 http://127.0.0.1:9898
 ```
 
-注意不要以斜线结尾。  
+注意不要以斜线结尾。
 保存配置后，添加 Transmission 下载器，如果能够成功添加，则说明配置正确。
 
 ## 添加 Transmission 到 PeerBanHepler 中

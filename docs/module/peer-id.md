@@ -1,6 +1,6 @@
 # PeerID 过滤器
 
-PeerID 过滤器会使用由 Peer 主动汇报的 PeerID 来检测。对于内置 PeerID 过滤器的客户端（例如 qBittorrent Enhanced Edition），建议优先使用其内置的 PeerID 过滤功能。  
+PeerID 过滤器会使用由 Peer 主动汇报的 PeerID 来检测。对于内置 PeerID 过滤器的客户端（例如 qBittorrent Enhanced Edition），建议优先使用其内置的 PeerID 过滤功能。
 
 :::warning
 PeerID 是由 Peer 主动汇报的（可以被随意修改），因此不能作为判定对方客户端的依据。

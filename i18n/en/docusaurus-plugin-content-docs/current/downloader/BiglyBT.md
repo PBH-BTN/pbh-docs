@@ -36,7 +36,7 @@ Upgrading is simple. First, download Java 21 JDK from [Azul Zulu](https://www.az
 
 ## Install PBH-BiglyBT/PBH-Azureus Adapter
 
-Download the BiglyBT adapter: [PBH-BTN/PBH-Adapter-BiglyBT](https://github.com/PBH-BTN/PBH-Adapter-BiglyBT/releases). Choose the JAR file ending in `.jar` when downloading.  
+Download the BiglyBT adapter: [PBH-BTN/PBH-Adapter-BiglyBT](https://github.com/PBH-BTN/PBH-Adapter-BiglyBT/releases). Choose the JAR file ending in `.jar` when downloading.
 Download the Azureus/Vuze adapter: [PBH-BTN/PBH-Adapter-Azureus](https://github.com/PBH-BTN/PBH-Adapter-Azureus/releases).
 
 The installation process is similar for both.

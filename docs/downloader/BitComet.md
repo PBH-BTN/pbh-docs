@@ -6,7 +6,7 @@ sidebar_position: 5
 
 :::warning
 
-所有部署在 Docker 中的下载器，不得使用 bridge 桥接网络模式，必须使用 host 网络模式，以使下载器能够获取正确的 Peer 入站地址，否则 PeerBanHelper 将完全不会工作！ 
+所有部署在 Docker 中的下载器，不得使用 bridge 桥接网络模式，必须使用 host 网络模式，以使下载器能够获取正确的 Peer 入站地址，否则 PeerBanHelper 将完全不会工作！
 
 :::
 
@@ -51,8 +51,8 @@ PeerBanHelper 所需的 WebAPI 仅在 `v2.10 Beta6 [20240928]` 或更高版本�
 默认情况下，WebUI 会受到网络连接中的速度限制。这可能会影响 PeerBanHelper 访问 BitComet WebAPI 的性能，导致封禁失败和延迟。因此，需要禁用此功能。
 
 1. 在设置界面左侧树形菜单中，选择“高级设置”。
-2. 关闭远程访问速度限制  
-  （如果使用的是较旧版本）找到`network.ignore_remote_access_in_speed_limit`，并将其值设置为“是”。  
+2. 关闭远程访问速度限制。
+  （如果使用的是较旧版本）找到`network.ignore_remote_access_in_speed_limit`，并将其值设置为“是”。
   （如果使用的是较新版本）找到`network.exclude_remote_access_from_connection_restrictions`，并将其值设置为“是”。
 
 | 较旧版本 | 较新版本 |
@@ -74,7 +74,7 @@ PeerBanHelper 需要通过远程访问功能连接 BitComet。此功能默认关
 - 确保防火墙配置正确，只开放必要端口
 :::
 
-![step4](./assets/BitComet-step4.png) 
+![step4](./assets/BitComet-step4.png)
 
 
 完成所有设置后，请确保点击保存。

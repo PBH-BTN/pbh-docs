@@ -6,7 +6,7 @@ sidebar_position: 4
 
 :::warning
 
-所有部署在 Docker 中的下载器，不得使用 bridge 桥接网络模式，必须使用 host 网络模式，以使下载器能够获取正确的 Peer 入站地址，否则 PeerBanHelper 将完全不会工作！ 
+所有部署在 Docker 中的下载器，不得使用 bridge 桥接网络模式，必须使用 host 网络模式，以使下载器能够获取正确的 Peer 入站地址，否则 PeerBanHelper 将完全不会工作！
 
 :::
 
@@ -19,7 +19,7 @@ PeerBanHelper 将通过 Deluge 的插件系统连接到 Deluge。
 ### Windows 系统安装步骤
 
 1. 在 Deluge 中，选择"编辑"->"首选项"打开配置窗口。
-   
+
    ![step1](assets/Deluge-step1.png)
 
 2. 转到"插件"菜单，点击"安装插件"按钮。

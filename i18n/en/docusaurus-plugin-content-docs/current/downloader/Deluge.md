@@ -19,7 +19,7 @@ First, you need to download the Deluge adapter: [PBH-BTN/PBH-Adapter-Deluge](htt
 ### Windows Installation Steps
 
 1. In Deluge, select "Edit" -> "Preferences" to open the configuration window.
-   
+
    ![step1](assets/Deluge-step1.png)
 
 2. Go to the "Plugins" menu and click the "Install Plugin" button.

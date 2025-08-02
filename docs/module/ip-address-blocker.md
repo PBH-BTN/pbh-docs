@@ -20,18 +20,18 @@ IP 黑名单，支持输入一个或多个 IP 地址或者 CIDR 地址。列出�
 
 ## ASNs
 
-ASN 黑名单。需要配合 Maxmind GeoLite2 ASN 数据库使用。ASN 数据库应该会在启动 PBH 时伴随 IPDB 一起下载。  
+ASN 黑名单。需要配合 Maxmind GeoLite2 ASN 数据库使用。ASN 数据库应该会在启动 PBH 时伴随 IPDB 一起下载。
 支持输入一个或者多个 [ASN](https://zh-hans.ipshu.com/asn_list)，所有在给定的 ASN 内的 IP 地址在连接到您的下载器即会被封禁。
 
 不建议中国大陆地区使用 ASN 封禁，因为 AOE 范围可能过大。
 
 ## Regions
 
-国家/地区黑名单。可以输入一个或者多个 [ISO 3166-1 国家二字母码](https://www.rr78.com/World/postal/)。需要配合 Maxmind GeoLite2 City 数据库。 City 数据库应该会在启动 PBH 时伴随 IPDB 一起下载。 
+国家/地区黑名单。可以输入一个或者多个 [ISO 3166-1 国家二字母码](https://www.rr78.com/World/postal/)。需要配合 Maxmind GeoLite2 City 数据库。 City 数据库应该会在启动 PBH 时伴随 IPDB 一起下载。
 
 ## Cities
 
-城市黑名单。对于境外城市，使用 Maxmind 城市名称。如果是 GeoCN 收录的城市（中国大陆境内、部分台湾香港澳门），使用标准简体中文名称。  
+城市黑名单。对于境外城市，使用 Maxmind 城市名称。如果是 GeoCN 收录的城市（中国大陆境内、部分台湾香港澳门），使用标准简体中文名称。
 使用包含匹配算法，只要名称中包含给定关键字，即封禁：
 
 * `New York` - 封禁美国纽约
@@ -53,7 +53,7 @@ ASN 黑名单。需要配合 Maxmind GeoLite2 ASN 数据库使用。ASN 数据�
 
 ## Net Type
 
-网络类型黑名单。需要配合 GeoCN 数据库。 GeoCN 数据库应该会在启动 PBH 时伴随 IPDB 一起下载。  
+网络类型黑名单。需要配合 GeoCN 数据库。 GeoCN 数据库应该会在启动 PBH 时伴随 IPDB 一起下载。
 
 如果 IP 的网络类型被 GeoCN 数据库收录，则可以封禁对应网络类型的 IP 地址。
 

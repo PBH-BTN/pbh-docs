@@ -1,9 +1,9 @@
 # Active Monitoring
 
-Some of the statistical features provided by PBH require this module to be enabled.  
-When active monitoring is enabled, PBH will store and update all Peers data obtained during each scan of the downloader into the database to provide visual statistics and traffic alert services.  
+Some of the statistical features provided by PBH require this module to be enabled.
+When active monitoring is enabled, PBH will store and update all Peers data obtained during each scan of the downloader into the database to provide visual statistics and traffic alert services.
 
-It is not recommended to enable this feature for users with EMMC chips or SD cards. Besides affecting performance, it may also accelerate flash memory wear.  
+It is not recommended to enable this feature for users with EMMC chips or SD cards. Besides affecting performance, it may also accelerate flash memory wear.
 
 Transmission and BitComet users may have missing data due to API limitations.
 

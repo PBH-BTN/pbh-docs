@@ -26,7 +26,7 @@ For users using Transmission on Linux and Docker, you probably have already conf
 
 ## Configure PeerBanHelper Blocklist Provider Endpoint
 
-Since Transmission's blocklist update method is active pulling rather than PeerBanHelper pushing to it, you need to configure a "blocklist provider endpoint" to provide HTTP service to Transmission for the blocklist.  
+Since Transmission's blocklist update method is active pulling rather than PeerBanHelper pushing to it, you need to configure a "blocklist provider endpoint" to provide HTTP service to Transmission for the blocklist.
 Don't worry though, PeerBanHelper has already done this for you. PBH's WebUI HTTP server can also serve this role. This way, whenever there are any changes to the blocklist, PeerBanHelper will automatically update and notify Transmission to pull.
 
 You need to open PeerBanHelper's WebUI and go to "Settings -> Basic Settings -> WebUI -> Prefix", and set it to an address where Transmission can access PeerBanHelper WebUI.
@@ -44,7 +44,7 @@ For example:
 ```plains
 ```
 
-Note: Don't end with a forward slash.  
+Note: Don't end with a forward slash.
 After saving the configuration, try adding the Transmission downloader. If it can be added successfully, the configuration is correct.
 
 ## Add Transmission to PeerBanHelper
