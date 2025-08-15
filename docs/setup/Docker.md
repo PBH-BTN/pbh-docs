@@ -32,7 +32,7 @@ services:
     environment:
       - PUID=0
       - PGID=0
-      - TZ=UTC
+      - TZ=Asia/Shanghai
 ```
 
 保存并退出编辑器，执行命令 `sudo docker-compose up -d` 以启动服务。Web 界面将在 9898 端口开放。
@@ -50,7 +50,7 @@ docker run -d \
     -v ${PWD}/:/app/data/ \
     -e PUID=0 \
     -e PGID=0 \
-    -e TZ=UTC \
+    -e TZ=Asia/Shanghai \
     你的镜像标签
 ```
 :::warning
@@ -73,7 +73,7 @@ PublishPort=9898:9898
 Network=host
 Environment=PUID=0
 Environment=PGID=0
-Environment=TZ=UTC
+Environment=TZ=Asia/Shanghai
 AutoUpdate=registry
 [Install]
 WantedBy=multi-user.target default.target

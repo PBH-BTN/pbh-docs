@@ -44,11 +44,20 @@ docker-compose up -d
 ```
 The webui will be opened at `9898`.
 
-## Using docker cli
+## Using Docker CLI
 
 Create a directory as the data storage location for PBH, and switch the working directory to this location.
 ```shell
-sudo docker run -d --name peerbanhelper --stop-timeout -p 9898:9898 -v ${PWD}/:/app/data/ <tags>
+docker run -d \
+    --name PeerBanHelper \
+    --restart unless-stopped \
+    --stop-timeout 30 \
+    -p 9898:9898 \
+    -v ${PWD}/:/app/data/ \
+    -e PUID=0 \
+    -e PGID=0 \
+    -e TZ=UTC \
+    <tag>
 ```
 The webui will be opened at `9898`.
 
