@@ -1,6 +1,6 @@
 # Multi-Dialing Blocker
 
-Some malicious users acquire a large number of IP addresses from the same subnet by using multi-dialing or similar methods.  
+Some malicious users acquire a large number of IP addresses from the same subnet by using multi-dialing or similar methods.
 Although ARB (Automatic Range Blocking) has nearly the same functionality as this module, it only activates when a ban condition is met. In contrast, the multi-dialing blocker actively monitors connected peers without waiting for a ban command.
 
 When the number of IP addresses from the same subnet exceeds the specified threshold and these IPs are connected to the same torrent, subnet banning will be initiated.

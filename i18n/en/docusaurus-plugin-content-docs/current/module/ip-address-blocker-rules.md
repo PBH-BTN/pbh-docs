@@ -1,6 +1,6 @@
 # Subscription Rules
 
-One of the important modules of PeerBanHelper, it subscribes to rules from [PBH-BTN/BTN-Collected-Rules](https://github.com/PBH-BTN/BTN-Collected-Rules) by default.  
+One of the important modules of PeerBanHelper, it subscribes to rules from [PBH-BTN/BTN-Collected-Rules](https://github.com/PBH-BTN/BTN-Collected-Rules) by default.
 When an IP from the rules connects to the downloader, PeerBanHelper will immediately block it.
 
 :::tip

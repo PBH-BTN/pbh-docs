@@ -2,7 +2,7 @@
 
 ## EcoQoS Throttling (Windows 11 22H2+)
 
-In Windows 11 version 22H2 or higher, if the system BIOS and CPU support it, PeerBanHelper will enable [EcoQoS](https://devblogs.microsoft.com/performance-diagnostics/introducing-ecoqos/) power-saving optimizations.  
+In Windows 11 version 22H2 or higher, if the system BIOS and CPU support it, PeerBanHelper will enable [EcoQoS](https://devblogs.microsoft.com/performance-diagnostics/introducing-ecoqos/) power-saving optimizations.
 This mitigates the sudden power draw caused by CPU turbo boost during each detection due to burst computation, and lowers PBH’s priority, giving more system resources to other programs.
 
 On older versions of Windows or platforms, this feature will only lower its own process priority.

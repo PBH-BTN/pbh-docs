@@ -22,7 +22,7 @@ This feature is rarely used, so no further explanation is provided.
 
 ## ASNs
 
-ASN blacklist. It needs to be used with the Maxmind GeoLite2 ASN database. The ASN database should be downloaded along with the IPDB when PBH starts.  
+ASN blacklist. It needs to be used with the Maxmind GeoLite2 ASN database. The ASN database should be downloaded along with the IPDB when PBH starts.
 Supports entering one or more [ASN](https://zh-hans.ipshu.com/asn_list), and any IP addresses within the given ASN will be banned when connecting to your downloader.
 
 It is not recommended to use ASN blocking in mainland China, as the AOE range may be too large.
@@ -33,7 +33,7 @@ Country/Region blacklist. You can enter one or more [ISO 3166-1 two-letter count
 
 ## Cities
 
-City blacklist. For foreign cities, use the Maxmind city names. For cities recorded in GeoCN (mainland China, some parts of Taiwan, Hong Kong, and Macau), use the standard Simplified Chinese names.  
+City blacklist. For foreign cities, use the Maxmind city names. For cities recorded in GeoCN (mainland China, some parts of Taiwan, Hong Kong, and Macau), use the standard Simplified Chinese names.
 Using a matching algorithm, as long as the name contains the given keyword, it will be banned:
 
 * `New York` - Bans New York, USA

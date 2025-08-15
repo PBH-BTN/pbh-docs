@@ -1,9 +1,9 @@
 # Active Monitoring
 
-Some of the statistical features provided by PBH require this module to be enabled.  
-When active monitoring is enabled, PBH will store and update all Peers data obtained during each scan of the downloader into the database to provide visual statistics and traffic alert services.  
+Some of the statistical features provided by PBH require this module to be enabled.
+When active monitoring is enabled, PBH will store and update all Peers data obtained during each scan of the downloader into the database to provide visual statistics and traffic alert services.
 
-It is not recommended to enable this feature for users with EMMC chips or SD cards. Besides affecting performance, it may also accelerate flash memory wear.  
+It is not recommended to enable this feature for users with eMMC chips or SD cards. Besides affecting performance, it may also accelerate flash memory wear.
 
 Transmission and BitComet users may have missing data due to API limitations.
 
@@ -54,8 +54,8 @@ For IP-torrent records, each IP connected to a different torrent is considered a
   # Allow PBH records all data that fetched from downloader and save them into SQLite database
   # 其产生的数据可被其它模块调用（如：生成图表报表等）
   # The data produced by this module can be re-used by other modules
-  # 注意：使用 SD 卡或者 EMMC 的设备【不建议】开启此功能，此功能对于存储设备的读写压力较高，可能加快 Flash 存储芯片磨损或导致存储设备过热
-  # NOTE: It is not recommended to enable this module if PBH running on SDCard or EMMC Flash chip.
+  # 注意：使用 SD 卡或者 eMMC 的设备【不建议】开启此功能，此功能对于存储设备的读写压力较高，可能加快 Flash 存储芯片磨损或导致存储设备过热
+  # NOTE: It is not recommended to enable this module if PBH running on SDCard or eMMC Flash chip.
   # 另请注意：此功能可能还会导致本地数据库文件大小快速变大，不建议在存储空间不充足的存储设备上使用此功能
   # NOTE: This may lead database size increase quickly
   active-monitoring:

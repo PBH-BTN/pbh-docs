@@ -8,7 +8,7 @@ View ban curves over your selected time range. You can adjust the time interval 
 ## Multi-dimensional Pie Charts
 Analyze data across three dimensions:
 - Number of bans per PeerID
-- Seeds with highest IP bans 
+- Seeds with highest IP bans
 - Functional modules contributing to bans
 
 ## Location and ISP Data

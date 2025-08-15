@@ -1,15 +1,15 @@
 # AviatorScript 引擎
 
-PeerBanHelper 允许用户加载 [AviatorScript 用户脚本](https://www.yuque.com/boyan-avfmj/aviatorscript/cpow90)。  
+PeerBanHelper 允许用户加载 [AviatorScript 用户脚本](https://www.yuque.com/boyan-avfmj/aviatorscript/cpow90)。
 
 ## 简述
 
-AviatorScript 允许用户加载一个用户脚本，以便在 PBH 检测 Peer 时执行自定义的代码。支持反射、实例创建等高级操作，拥有完整编程能力。  
+AviatorScript 允许用户加载一个用户脚本，以便在 PBH 检测 Peer 时执行自定义的代码。支持反射、实例创建等高级操作，拥有完整编程能力。
 有时 PBH 遇到新变种时，在无法发布新版本 PBH 的情况下，会向社区公开 AviatorScript 脚本，以便在不更新 PBH 的情况下进行检查和封禁。
 
 ## 安装 AviatorScript 脚本
 
-AviatorScript 脚本以 `.av` 结尾。将其放入 `data/scripts/` 目录即可加载。  
+AviatorScript 脚本以 `.av` 结尾。将其放入 `data/scripts/` 目录即可加载。
 如果你是本地安装，则可以直接通过 WebUI 管理脚本。
 
 ![expression-engine](./assets/expression-engine.png)
@@ -40,7 +40,7 @@ AviatorScript 脚本以 `.av` 结尾。将其放入 `data/scripts/` 目录即可
 
 ### 预设变量
 
-一些变量在执行前就已提前注入到 AviatorScript 运行时，您可以直接使用它们，参见配置文件。  
+一些变量在执行前就已提前注入到 AviatorScript 运行时，您可以直接使用它们，参见配置文件。
 
 ### 返回值
 

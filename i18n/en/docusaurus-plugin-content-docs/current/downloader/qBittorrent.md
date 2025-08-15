@@ -40,7 +40,7 @@ Next, follow these steps:
 In addition to enabling WebUI, some configuration adjustments are needed for PeerBanHelper to function properly:
 
 1. Switch to the "Advanced" tab in the left sidebar.
-2. Scroll down to the "libtorrent-related" section and uncheck the option titled "Allow multiple connections from the same IP address". 
+2. Scroll down to the "libtorrent-related" section and uncheck the option titled "Allow multiple connections from the same IP address".
 
 :::tip
 Starting with version `v7.2.0`, qBittorrent will automatically disable the "Allow multiple connections from the same IP address" option when a downloader connects to PBH, so you needn't to manually configure it if your version is correct.

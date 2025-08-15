@@ -4,12 +4,12 @@ PeerBanHelper allows users to load [AviatorScript user scripts](https://www.yuqu
 
 ## Overview
 
-AviatorScript allows users to load a user script to execute custom code when PBH detects a Peer. It supports advanced operations like reflection and instance creation, offering full programming capabilities.  
+AviatorScript allows users to load a user script to execute custom code when PBH detects a Peer. It supports advanced operations like reflection and instance creation, offering full programming capabilities.
 Sometimes, when PBH encounters a new variant and cannot release a new PBH version, AviatorScript scripts are made available to the community so that checks and bans can be performed without updating PBH.
 
 ## Installing AviatorScript Scripts
 
-AviatorScript scripts end with `.av`. Simply place them in the `data/scripts/` directory to load them.  
+AviatorScript scripts end with `.av`. Simply place them in the `data/scripts/` directory to load them.
 If you have a local installation, you can manage the scripts directly through the WebUI.
 
 ![expression-engine](./assets/expression-engine.png)

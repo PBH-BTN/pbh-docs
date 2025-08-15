@@ -10,7 +10,7 @@ All downloaders that deploy in Docker MUST use host network mode to make sure do
 
 :::
 
-PeerBanHelper interacts with BitComet using the BitComet WebAPI. This chapter will guide you on enabling the WebAPI for BitComet and connecting PeerBanHelper to BitComet.  
+PeerBanHelper interacts with BitComet using the BitComet WebAPI. This chapter will guide you on enabling the WebAPI for BitComet and connecting PeerBanHelper to BitComet.
 
 ## Notice
 
@@ -20,12 +20,12 @@ Special Note: Support for BitComet is currently highly experimental, and there a
 
 :::
 
-BitComet users may frequently encounter the message "The peer being banned is already in the ban list." This issue arises because BitComet processes bans asynchronously. You can safely ignore this warning unless it appears continuously without stopping.  
+BitComet users may frequently encounter the message "The peer being banned is already in the ban list." This issue arises because BitComet processes bans asynchronously. You can safely ignore this warning unless it appears continuously without stopping.
 If you see errors like "Ban thread unresponsive" or "Unable to retrieve peers," these are typically caused by BitComet's WebAPI timeout issues. This problem has been reported to BitComet but remains unresolved. You don't need to worry, as PBH will retry in the next ban process.
 
 ## Verify Version
 
-The WebAPI required by PeerBanHelper is only available in `v2.10 Beta6 [20240928]` or later. As of this writing, the v2.10 stable version has not yet been released. Once it is, you should use v2.10 or a later stable release.  
+The WebAPI required by PeerBanHelper is only available in `v2.10 Beta6 [20240928]` or later. As of this writing, the v2.10 stable version has not yet been released. Once it is, you should use v2.10 or a later stable release.
 Any earlier versions of BitComet are unsupported and will not work.
 
 ## Enable IP Filter
@@ -58,7 +58,7 @@ In the settings window, navigate to "Advanced Settings" in the left-side menu tr
 
 PeerBanHelper requires the remote access feature to connect to BitComet. This feature is disabled by default and needs to be manually enabled.
 
-In the settings window, navigate to "Advanced Settings -> Remote Access," check "Enable Web Remote Access," and set a username and password.  
+In the settings window, navigate to "Advanced Settings -> Remote Access," check "Enable Web Remote Access," and set a username and password.
 Scroll down to find the port number setting and note the displayed port number.
 
 ![step4](./assets/BitComet-step4.png)

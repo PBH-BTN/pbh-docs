@@ -1,6 +1,6 @@
 # ClientName Filter
 
-The ClientName filter uses the ClientName actively reported by the Peer (sometimes called "client name" or "UserAgent") for detection. It is recommended to prioritize using the built-in ClientName filtering functionality of clients with an embedded PeerID filter (e.g., qBittorrent Enhanced Edition).  
+The ClientName filter uses the ClientName actively reported by the Peer (sometimes called "client name" or "UserAgent") for detection. It is recommended to prioritize using the built-in ClientName filtering functionality of clients with an embedded PeerID filter (e.g., qBittorrent Enhanced Edition).
 Note that the ClientName is actively reported by the Peer (and can be arbitrarily modified), so it should not be used as the sole basis for determining the client type.
 
 ClientName is an [extended protocol](https://www.bittorrent.org/beps/bep_0010.html) of BitTorrent, so a Peer may not have a ClientName. In such cases, PeerBanHelper will display it as `N/A`.

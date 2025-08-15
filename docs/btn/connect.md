@@ -8,7 +8,7 @@ Sparkle 是 PBH-BTN 组织的官方 BTN 服务器。
 
 ### 注册账号并创建 UserApp
 
-请在浏览器中打开 [https://sparkle.pbh-btn.com](https://sparkle.pbh-btn.com) 并使用 GitHub 授权登录，系统将自动为您创建一个账号。  
+请在浏览器中打开 [https://sparkle.pbh-btn.com](https://sparkle.pbh-btn.com) 并使用 GitHub 授权登录，系统将自动为您创建一个账号。
 
 接着，点击页面顶部的“用户应用程序”链接，进入管理页面。
 
