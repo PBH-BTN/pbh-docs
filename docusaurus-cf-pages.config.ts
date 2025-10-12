@@ -124,10 +124,6 @@ const config: Config = {
           title: "支持我们",
           items: [
             {
-              label: "面包多",
-              to: "https://mbd.pub/o/ghostchu",
-            },
-            {
               label: "爱发电",
               to: "https://afdian.com/a/Ghost_chu",
             },

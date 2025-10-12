@@ -27,6 +27,6 @@ Check out the [FAQ](./faq.md), and if it doesn't help you, feel free to [join th
 
 PeerBanHelper is an open-source software, and you are free to distribute and download PeerBanHelper.
 
-If PeerBanHelper has been helpful to you, consider supporting us with a donation on [Breads](https://mbd.pub/o/ghostchu) or [Afdian](https://afdian.com/a/Ghost_chu).
+If PeerBanHelper has been helpful to you, consider supporting us with a donation on [Afdian](https://afdian.com/a/Ghost_chu).
 All donation income will be used to maintain the PBH-BTN infrastructure and reward our hardworking community maintainers.
 
