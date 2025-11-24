@@ -31,7 +31,7 @@ services:
     stop_grace_period: 30s
 ```
 
-保存并退出编辑器，执行命令 `sudo docker-compose up -d` 以启动服务。Web 界面将在 9898 端口开放。
+保存并退出编辑器，执行命令 `sudo docker compose up -d` 以启动服务。Web 界面将在 9898 端口开放。
 
 ## 使用 Podman Quadlet
 
