@@ -87,3 +87,40 @@ If for some reason you have to edit scripts on the Internet and understand that 
 ```
 java -Dpbh.please-disable-safe-network-environment-check-i-know-this-is-very-dangerous-and-i-may-lose-my-data-and-hacker-may-attack-me-via-this-endpoint-and-steal-my-data-or-destroy-my-computer-i-am-fully-responsible-for-this-action-and-i-will-not-blame-the-developer-for-any-loss ...
 ```
+
+## How to Perform a Clean Installation
+
+Sometimes, PeerBanHelper's program files may become corrupted or encounter errors, preventing it from running normally. You can try performing a clean installation to remove all residual files and attempt to restore normal operation.
+
+First, please run the PeerBanHelper uninstaller and follow the wizard to complete the standard uninstallation. The standard uninstallation will remove registered service items and registry entries from your system, so we don't have to manually clean these files.
+
+### Windows Platform
+
+For the Windows platform, before performing the following operations, please run the PeerBanHelper uninstaller from the Start menu.
+
+PeerBanHelper may store data in any of the following locations on the Windows platform (the specific storage location may vary depending on the actual situation). Please find and delete them. If the corresponding directory does not exist, it means PeerBanHelper has not stored files in these locations on your device, and you can skip to the next path.  
+When you encounter paths wrapped with `% %`, please copy the entire path into the Windows Explorer address bar and press Enter to navigate (if it exists).
+
+If you have modified the installation path yourself, the path may differ from the paths listed below. You will need to handle the related changes yourself.
+
+* `%ProgramFiles%\PeerBanHelper` - System installation (System) standard installation directory (UAC)
+* `%ProgramFiles(x86)%\PeerBanHelper` - System installation standard installation directory (x86)
+* `%LOCALAPPDATA%\PeerBanHelper` - General user profile storage directory
+* `%APPDATA%\PeerBanHelper` - General roaming user profile storage directory
+* `%USERPROFILE%\AppData\Local\Programs\PeerBanHelper` - User installation (User) standard installation directory (no UAC)
+* `%WINDIR%\System32\config\systemprofile\AppData\Local\PeerBanHelper` - Service installation (Service) data storage directory
+
+### Linux via Install4j / PKG
+
+For Linux package managers, please first use the package manager to uninstall the PeerBanHelper package.
+
+* `/var/lib/peerbanhelper`
+* `/etc/peerbanhelper`
+* `/usr/lib/peerbanhelper`
+* `/var/log/peerbanhelper`
+* `~/.config/PeerBanHelper`
+
+### macOS
+
+* `/Library/Application Support/PeerBanHelper`
+* `~/.config/PeerBanHelper`

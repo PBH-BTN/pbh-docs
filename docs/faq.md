@@ -82,3 +82,40 @@ Basic Auth 是在浏览器访问时弹出用户名密码验证框的安全机制
 java -Dpbh.please-disable-safe-network-environment-check-i-know-this-is-very-dangerous-and-i-may-lose-my-data-and-hacker-may-attack-me-via-this-endpoint-and-steal-my-data-or-destroy-my-computer-i-am-fully-responsible-for-this-action-and-i-will-not-blame-the-developer-for-any-loss ...
 ```
 **注意**：此操作极具风险，请务必谨慎使用。
+
+## 如何进行清洁安装
+
+有时，PeerBanHelper 的程序文件可能出现损坏或者错误，无法正常运行。您可以尝试进行清洁安装来移除所有残留文件，并尝试恢复运行。
+
+首先，请运行 PeerBanHelper 卸载程序，根据程序向导完成标准卸载。标准卸载将会从您的系统上移除注册的服务项和注册表项，这样我们就不必手动清理这些文件。
+
+### Windows 平台
+
+对于 Windows 平台，执行下列操作前，请先运行开始菜单中的 PeerBanHelper 卸载程序。
+
+PeerBanHelper 在 Windows 平台上可能在如下任意位置存储数据（其具体存储位置可能视实际情况而定），请找到并删除它们。如果不存在对应目录，则说明 PeerBanHelper 未在您的设备上的这些位置存储文件，可以跳过并检查下一条路径。  
+当您遇到使用 `% %` 包裹的路径时，请将整个路径复制到 Windows 资源管理器的地址栏中回车，即可跳转（如存在）。
+
+如果您自行修改过安装路径，则可能路径与下列路径不同。您需要自行处理相关更改。
+
+* `%ProgramFiles%\PeerBanHelper` - 系统安装(System)标准安装目录 (UAC)
+* `%ProgramFiles(x86)%\PeerBanHelper` - 系统安装标准安装目录 (x86)
+* `%LOCALAPPDATA%\PeerBanHelper` - 通用用户配置文件存储目录
+* `%APPDATA%\PeerBanHelper` - 通用漫游用户配置文件存储目录
+* `%USERPROFILE%\AppData\Local\Programs\PeerBanHelper` - 用户安装(User)标准安装目录 (无UAC)
+* `%WINDIR%\System32\config\systemprofile\AppData\Local\PeerBanHelper` - 服务安装(Service)数据存储目录
+
+### Linux via Install4j / PKG
+
+对于 Linux 包管理器，请先使用包管理器卸载 PeerBanHelper 包。
+
+* `/var/lib/peerbanhelper`
+* `/etc/peerbanhelper`
+* `/usr/lib/peerbanhelper`
+* `/var/log/peerbanhelper`
+* `~/.config/PeerBanHelper`
+
+### macOS
+
+* `/Library/Application Support/PeerBanHelper`
+* `~/.config/PeerBanHelper`
