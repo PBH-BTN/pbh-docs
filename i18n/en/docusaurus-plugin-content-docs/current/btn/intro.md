@@ -87,7 +87,7 @@ The "Cloud Rules" capability allows the BTN server to periodically provide anti-
 "Submit Swarm Tracking Data" is the successor to "Submit History Records" and "Submit Snapshot Data". The new "Submit Swarm Tracking Data" tracks, stores, and submits peer data in a more server-friendly format to reduce the data aggregation and analysis pressure on BTN servers. This capability allows the BTN server to periodically receive peer activity and last recorded activity data snapshots from downloaders tracked by PeerBanHelper. This data helps the BTN server analyze malicious behavior on the network and dynamically generate anti-leech rules to block this malicious behavior. Additionally, this data helps to analyze for vulnerabilities in PeerBanHelper's anti-leech functionality and detect any in-the-wild exploits that bypass its anti-leech mechanisms.
 
 ### IP Reject List
-The IP reject list capability allows remote servers to issue IP/CIDR address lists that need to be intercepted. Connections located in this list will be immediately banned by PeerBanHelper.
+The IP reject list capability allows remote servers to issue IP/CIDR address lists that need to be intercepted. Connections from addresses in this list will be immediately banned by PeerBanHelper.
 
 ## Concerns about Privacy and Security
 
