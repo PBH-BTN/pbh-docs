@@ -40,7 +40,7 @@ After obtaining the AppID and AppSecret, you need to configure the connection in
 3. Depending on your needs, you can also configure the following options:
    
    - **Enable submit**: Allows PeerBanHelper to contribute detected malicious client data to the BTN network, helping the entire community improve security. The submitted data does not include the torrent's info_hash and name, but uses an irreversible hash-generated torrent_identifier and torrent size to protect your privacy.
-   - **Allow BTN server push scripts**: This option will allow BTN server push scripts to your device, this may increase the accuracy of the ban. **Warning: this means that the remote server can execute any code on your device, please enable with caution!**
+   - **Allow BTN server push scripts**: This option will allow BTN server push scripts to your device, this may increase the accuracy of the ban. **Warning: This allows the remote server to execute code on your device. Only enable this when connected to a server you fully trust!**
 
 4. Scroll to the bottom of the page, click the "Save" button, and restart PeerBanHelper for the settings to take effect.
 
