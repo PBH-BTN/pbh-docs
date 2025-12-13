@@ -16,13 +16,13 @@
 
    ![用户应用程序页面](./assets/userapp-management.png)
 
-4. 请务必记录页面上显示的 `AppID` 和 `AppSecret`，因为一旦关闭该页面，`AppSecret` 将不再显示。如果您不小心忘记了它们，也可以回到用户应用管理页面重置密钥。
+4. 请务必记录页面上显示的 `App ID` 和 `App Secret`，因为一旦关闭该页面，`App Secret` 将不再显示。如果您不小心忘记了它们，也可以回到用户应用管理页面重置密钥。
 
    ![成功创建用户应用程序](./assets/userapp-created.png)
 
 ## 在 PeerBanHelper 上配置 BTN 连接
 
-获取 AppID 和 AppSecret 后，您需要在 PeerBanHelper 中配置连接信息：
+获取 App ID 和 App Secret 后，您需要在 PeerBanHelper 中配置连接信息：
 
 1. 打开 PeerBanHelper 的 WebUI ，前往 “设置” -> “基础设置” 选项。
 
@@ -31,8 +31,8 @@
 2. 向下滑动至 BTN 设置部分，进行如下配置：
    
    - 勾选 “启用 BTN 模块”
-   - 在 “AppID” 字段中填入之前获取的 AppID
-   - 在 “App Secret” 字段中填入之前获取的 AppSecret
+   - 在 “App ID” 字段中填入之前获取的 App ID
+   - 在 “App Secret” 字段中填入之前获取的 App Secret
    - 在 “配置 URL” 字段中填入服务器地址：`https://sparkle.pbh-btn.com/ping/config`
 
    ![BTN 配置界面](./assets/btn2.png)
