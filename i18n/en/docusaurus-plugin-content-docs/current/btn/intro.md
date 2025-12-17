@@ -1,73 +1,88 @@
 ---
 sidebar_position: 1
 ---
+
 # What is BTN
 
-Before we start to understand what BTN is, we first need to understand various anti-leeching methods in history.
+Before we dive into BTN, let's review the development of anti-leech technologies.
 
-## The history of Anti-leeching
+## Development of Anti-Leech Technologies
 
-### Prehistoric Era
+### Initial Stage
 
-In the beginning, people used blacklists based on PeerID and ClientName to block a specific type of client, preventing them from connecting to the downloader to anti-leech.
-This anti-leeching method is crude and effective, but it assumes that the downloader will not disguise PeerID and ClientName. Once disguised, this function is completely ineffective.
+Initially, people used blacklist strategies based on PeerID and ClientName to prevent specific types of clients from connecting to downloaders for leeching. While this strategy was simple and effective, it relied on the premise that downloaders wouldn't disguise these identifiers. Once successfully disguised, the strategy became ineffective.
 
-### Traffic Detection Era
+### Traffic Monitoring Stage
 
-Later, downloaders like BitComet introduced traffic monitoring methods. If a Peer does not send any segments to the downloader for a period of time while downloading a file, it is considered leeching and is banned.
-However, for the leechers starting with 101., they would give very small upload traffic, but enough to deceive this kind of traffic monitoring anti-leeching method. Moreover, this method is useless for seeders.
+Subsequently, downloaders like BitComet introduced traffic monitoring mechanisms. If a Peer did not send any data pieces to the downloader within a period of time, it was considered leeching behavior and banned. However, for leechers in IP address ranges starting with 101., they circumvented this monitoring by sending minimal upload traffic. Meanwhile, this strategy was ineffective for seeders.
 
-### Tit-for-tat Algorithm Anti-leeching Era
+### Algorithm-Based Anti-Leeching Stage
 
-LibTorrent introduced a tit-for-tat, confrontational anti-leeching algorithm. If a Peer is unwilling to provide file segments, this Peer's priority in LT will gradually decrease until it completely stops transmitting data.
-Similar to traffic monitoring, a little upload is enough to deceive the detection, and it is useless for seeders (because seeding does not download any segments).
+LibTorrent introduced a tit-for-tat anti-leech algorithm. If a Peer was unwilling to provide data pieces, its priority in LibTorrent would gradually decrease until data transmission completely stopped. Similar to traffic monitoring, minimal uploads were sufficient to bypass detection, and it had no impact on seeders.
 
-### Heuristic Detection Algorithm
+### Heuristic Detection Stage
 
-The heuristic detection algorithm (Progress Checker/PCB) proposed by PeerBanHelper can effectively detect cheating methods such as progress rollback and excessive downloading. But it also has its own shortcomings - slow response.
-By the time the detection is triggered, the leecher has already maliciously downloaded a considerable amount of data. Therefore, although this method of anti-leeching is effective, it is inefficient. It can only be used to minimize losses.
+PeerBanHelper proposed heuristic detection algorithms (such as Progress Cheat Blocker/PCB) that could effectively detect cheating behaviors like progress rollback and excessive downloading. However, this algorithm responded slowly - by the time detection was triggered, leechers had already downloaded large amounts of data. Therefore, despite significant effectiveness, its efficiency was low and mainly used to minimize losses.
 
-## So What to Do
+## Response Strategy
 
-The answer is: shared IP rules.
+Facing these challenges, shared IP rules emerged. Initially, people passed high-risk IP segments through word-of-mouth, but as leechers frequently changed IPs, this approach had limited timeliness. Thus, a data analysis and IP banning technology that could respond quickly was needed.
 
-At first, we passed high-risk IP segments to each other. But with the start of guerrilla warfare, you block my IP, I change it, and unfortunately, this is a very time-sensitive thing. Before more people know about the new rules, the leecher may have already switched to the next IP address.
-Therefore, a data analysis and IP blocking technology that can respond quickly and timely must appear.
+## Birth of BTN
 
-## The Answer is BTN
+BTN (full name BitTorrent Threat Network) consists of BTN servers and BTN clients, exchanging data through the [BTN Protocol](https://github.com/PBH-BTN/BTN-Spec).
 
-BTN (full name BitTorrent Threat Network), it consists of BTN servers and BTN clients. Data is exchanged through the [BTN protocol](https://github.com/PBH-BTN/BTN-Spec).
+After BTN clients discover abnormal Peers through methods like PCB, they periodically report to the server via the BTN protocol. The server collects data from numerous clients, generates abnormal IP lists, and distributes them to different clients through the BTN protocol, thereby blocking leechers before their behavior occurs.
 
-After the BTN client discovers an abnormal Peer through methods such as PCB, it will report to the server regularly through the BTN protocol. In this way, we can collect data from a large number of clients, generate a list of abnormal IPs, and distribute them to different clients through the BTN protocol, blocking them out before they start leeching.
+## BTN Functions
 
-## What Can BTN Do?
+### Collecting and Analyzing Ban Reports
 
-### Collect, Analyze, and Ban Reports
+BTN receives ban reports submitted by clients. If an IP (or IP segment) is banned by multiple people, it's considered a high-risk IP address. BTN will automatically ban the IP and notify other clients to synchronize the ban.
 
-BTN can receive ban reports reported by clients. If an IP (/segment) is banned by multiple people, then it is a high-risk IP address. BTN will automatically ban it and notify other clients to ban it together.
+### Preventing Distributed Leeching
 
-### Prevent Dispersed Leeching
+Some leechers adopt a distributed strategy, downloading the same file from different users. From a single user's perspective, the leecher downloads the file only once, but in reality, the total data downloaded far exceeds the file size. BTN detects distributed leeching behavior by analyzing the total download volume of each IP (or IP segment) on each torrent and automatically bans them.
 
-Some leechers are smart, they download the same file from different people.
-From the perspective of each person, the leecher only downloaded the file once from them, but in fact, the leecher has downloaded a lot of data far beyond the file size.
+### Discovering New Clients
 
-BTN analyzes the total download volume of each IP (segment) on each torrent, checks for dispersed leeching, and automatically bans them.
+During data submission, BTN checks for new clients and records the first appearance and last seen times. This helps infer the activity time range of malicious leechers. For example, in August 2024, BTN helped us discover a leeching client using random PeerIDs.
 
-### Discover New Clients
+### Preventing PeerBanHelper Bypass
 
-When reporting data, BTN will also check whether it is a new client that has never been seen before. And record the first appearance and the last time seen.
-This helps to infer the approximate time range of malicious leeching activities.
+In addition to banning data, BTN clients also periodically capture real-time status snapshots of downloaders. This helps detect whether malicious leechers are bypassing existing detections through new methods.
 
-In August of the 24th year, it also helped us discover a leeching client using a random PeerID.
+## BTN Service Capabilities
 
-### Avoid PBH Being Bypassed
+BTN servers provide multiple capabilities that PeerBanHelper clients can interact with to achieve better protection:
 
-In addition to banning data, the BTN client will also take a real-time snapshot of the status on the downloader from time to time. This way we can detect whether there are malicious leechers bypassing the existing detection through new methods.
+### BTN IP Query Service
+The BTN IP Query Service allows PeerBanHelper to query the BTN server for more information about specific IP addresses. PeerBanHelper functional modules can use the capabilities provided by this service to obtain activity summaries of specific IP addresses on BTN.
 
-## Concerns about Privacy and Security
+### Reconfiguration Capability
+The "Reconfiguration" capability allows the BTN server to notify PeerBanHelper to contact the BTN server after a certain interval to refresh the configuration file used, in order to obtain configuration changes from the remote server.
 
-It sounds like a lot of data needs to be uploaded to the server. The answer is: yes.
+### Heartbeat Update
+This capability allows the BTN network to request PeerBanHelper to send a heartbeat request to the BTN server at regular intervals to update its status on the BTN network. Sometimes this function is also used to detect your available IP addresses to update records on the BTN network. This depends on server requirements.
 
-To perform these analysis operations, BTN must collect and upload a large amount of necessary data, all types of uploaded data can be found in the [BTN protocol specification](https://github.com/PBH-BTN/BTN-Spec).
+### Submit Ban List
+The "Submit Ban List" capability allows the BTN server to periodically receive PeerBanHelper's ban list and data snapshots at the time of banning. This data helps the BTN server analyze malicious behavior on the network and dynamically generate anti-leech rules to block this malicious behavior.
 
-It is particularly worth mentioning that: when uploading, we will not upload the info_hash and name of the torrent. Instead, we use the irreversible hashed torrent.
+### Cloud Rules
+The "Cloud Rules" capability allows the BTN server to periodically provide anti-leech rules generated by the remote server to PeerBanHelper as a supplement to local anti-leech rules.
+
+### Submit Swarm Tracking Data
+"Submit Swarm Tracking Data" is the successor to "Submit History Records" and "Submit Snapshot Data". The new "Submit Swarm Tracking Data" tracks, stores, and submits Peers data in a more server-friendly format to reduce the data aggregation and analysis pressure on BTN servers. This capability allows the BTN server to periodically receive Peers activities and last recorded activity data snapshots from downloaders tracked by PeerBanHelper. This data helps the BTN server analyze malicious behavior on the network and dynamically generate anti-leech rules to block this malicious behavior. At the same time, this data also helps analyze whether there are vulnerabilities in PeerBanHelper's anti-leech functionality that could be exploited in the wild to bypass anti-leech mechanisms.
+
+### IP Reject List
+The IP reject list capability allows remote servers to distribute lists of IP/CIDR addresses that need to be intercepted. Connections from addresses in this list will be immediately banned by PeerBanHelper.
+
+## Privacy and Security
+
+To implement the above functions, BTN must collect and upload large amounts of data. All types of uploaded data can be found in the [BTN Protocol Specification](https://github.com/PBH-BTN/BTN-Spec).
+
+Special Note: When uploading data, we do not include the torrent's info_hash and name, but instead use torrent_identifier and torrent size generated by irreversible hashing. This way, we cannot know the content of the torrents you submit (we don't care anyway), and only focus on whether they are the same or different torrents.
+
+If you do not wish to provide data, BTN clients typically offer submission control options. After turning off this option, you can still receive rules but won't upload data.
+
+Always remember: Only connect to BTN servers you trust.
