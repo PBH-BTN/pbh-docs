@@ -64,3 +64,8 @@ WantedBy=multi-user.target default.target
 Replace `<tags>` with the image tag you just copied.
 
 Reload systemd with `sudo systemctl daemon-reload` and start the container now and on boot with `sudo systemctl enable --now peerbanhelper.service`. If you're using `:latest`, activate automatic updates with `sudo systemctl enable podman-auto-update.{service,timer}`.
+
+## Upgrading
+
+To upgrade your installtion, update the image label for field `image` to the version what you want upgrade, and execute same commands again to update your container.  
+If the data losing after upgrade, that's mean you didn't mount data volume correctly, or your're in different working directory. Check your working directory and try again.

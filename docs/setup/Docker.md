@@ -31,7 +31,7 @@ services:
     stop_grace_period: 30s
 ```
 
-保存并退出编辑器，执行命令 `sudo docker-compose up -d` 以启动服务。Web 界面将在 9898 端口开放。
+保存并退出编辑器，执行命令 `sudo docker-compose up -d` 以启动服务。Web 界面将在 9898 端口开放。  
 
 ## 使用 Podman Quadlet
 
@@ -57,3 +57,8 @@ WantedBy=multi-user.target default.target
 将 `<标签>` 替换为你刚刚复制的镜像标签。
 
 使用 `sudo systemctl daemon-reload` 重新加载 systemd，并通过 `sudo systemctl enable --now peerbanhelper` 命令启动容器并设置为开机自启。如果你使用的是 `:latest`，可以通过 `sudo systemctl enable podman-auto-update.{service,timer}` 启用自动更新。
+
+## 版本升级
+
+若需要升级版本，更新 `image` 中的镜像标签到最新版本的版本标签，重新执行命令即可更新容器。  
+如发现更新后数据丢失，则说明没有正确挂在存储卷，或者工作目录与上次不同。请检查工作目录。 
