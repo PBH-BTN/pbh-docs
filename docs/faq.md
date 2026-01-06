@@ -30,7 +30,7 @@ OpenWRT/RouterOS 等高自由度路由固件可能需要检查 NAT 设定。
 
 ### 若 Uplay/Ubisoft Connect 正在运行或其他程序占用 WebUI 端口
 
-请关闭这些程序，或者[更改 WebUI 端口配置](./network/http-server.md#更改-webui-端口)。
+请关闭这些程序，或者[更改 WebUI 端口配置](./network/http-server.md#修改-webui-端口号)。
 
 ## 无法下载 IPDB/GeoIP 库或代理无效
 
@@ -38,7 +38,7 @@ OpenWRT/RouterOS 等高自由度路由固件可能需要检查 NAT 设定。
 
 ## WebUI 管理 Token 在哪里？
 
-请参见：[更改 WebUI Token](./network/http-server.md#更改-webui-token)。
+请参见：[修改 WebUI Token](./network/http-server.md#修改-webui-token)。
 
 ## 为什么弃用了 Transmission 下载器？
 
