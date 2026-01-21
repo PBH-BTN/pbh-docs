@@ -7,6 +7,14 @@ const config: Config = {
   tagline: "自动封禁不受欢迎、吸血和异常的 BT 客户端，并支持自定义规则",
   favicon: "img/favicon.ico",
 
+  scripts: [
+    {
+      src: "https://uma.pbh-btn.com/script.js",
+      defer: true,
+      "data-website-id": "cb44b970-8315-491d-8ad8-67a8544f59d7",
+    },
+  ],
+
   // Set the production url of your site here
   url: "https://pbh-btn.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
