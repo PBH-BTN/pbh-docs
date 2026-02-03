@@ -22,7 +22,7 @@ Docker 是 PeerBanHelper（简称 PBH）推荐的部署方式。借助 PBH 提�
 version: "3.9"
 services:
   peerbanhelper:
-    image: "ghostchu/peerbanhelper:latest"
+    image: "registry.cn-hangzhou.aliyuncs.com/ghostchu/peerbanhelper:latest"
     restart: unless-stopped
     container_name: "peerbanhelper"
     volumes:
@@ -46,6 +46,8 @@ sudo docker run --detach \
     nickfedor/watchtower
 ```
 
+仍然建议您定期检查 PBH 版本发布页查看变更日志。
+
 ## 使用 Podman Quadlet
 
 在 `/etc/containers/systemd` 中创建一个 `peerbanhelper.container` 文件，内容如下，根据需要更新 `Volume` 路径：
@@ -56,7 +58,7 @@ Description=PeerBanHelper Container
 [Container]
 ContainerName=peerbanhelper
 Image=ghostchu/peerbanhelper:latest
-Volume=/path/to/pbh-data:/app/data
+Volume=<数据目录路径>:/app/data
 PublishPort=9898:9898
 Network=host
 Environment=PUID=0
