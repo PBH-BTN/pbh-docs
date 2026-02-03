@@ -31,11 +31,11 @@ services:
     stop_grace_period: 30s
 ```
 
-保存并退出编辑器，执行命令 `sudo docker-compose up -d --pull always` 以启动服务。Web 界面将在 9898 端口开放。
+保存并退出编辑器，执行命令 `sudo docker compose up -d --pull always` 以启动服务。Web 界面将在 9898 端口开放。
 
 ## 版本升级
 
-若需要升级版本，在创建的 docker-compose.yml 同目录下运行命令 `sudo docker compose pull` 更新镜像并重新运行 `sudo docker-compose up -d --pull always` 即可更新。
+若需要升级版本，在创建的 docker-compose.yml 同目录下运行命令 `sudo docker compose pull` 更新镜像并重新运行 `sudo docker compose up -d --pull always` 即可更新。
 
 推荐您同时部署 watchtower，只需运行的下面命令，它就可以自动更新容器而无需人工管理:
 

@@ -31,11 +31,11 @@ services:
     stop_grace_period: 30s
 ```
 
-Save and exit the editor, then execute `sudo docker-compose up -d --pull always` to start the service. The web interface will be available on port 9898.
+Save and exit the editor, then execute `sudo docker compose up -d --pull always` to start the service. The web interface will be available on port 9898.
 
 ## Version Upgrade
 
-To upgrade the version, run `sudo docker compose pull` in the same directory as your `docker-compose.yml` to update the image, then run `sudo docker-compose up -d --pull always` again.
+To upgrade the version, run `sudo docker compose pull` in the same directory as your `docker-compose.yml` to update the image, then run `sudo docker compose up -d --pull always` again.
 
 We recommend also deploying Watchtower. Simply run the following command and it will automatically update containers without manual management:
 
