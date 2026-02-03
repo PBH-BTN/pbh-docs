@@ -12,10 +12,10 @@ fetch https://github.com/PBH-BTN/PeerBanHelper/releases/download/v6.4.2/peerbanh
 ```
 
 ## Install Java
-Use  `pkg` to install OpenJDK 21 or higher：
+Use  `pkg` to install OpenJDK 25 or higher：
 
 ```shell
-sudo pkg install openjdk21
+sudo pkg install openjdk25
 ```
 
 Verify:
@@ -27,8 +27,8 @@ java -version
 Once you installed successfully, you will get the following output:
 
 ```plain
-OpenJDK Runtime Environment (build 21.0.3+9-1)
-OpenJDK 64-Bit Server VM (build 21.0.3+9-1, mixed mode, sharing)
+OpenJDK Runtime Environment (build 25.0.3+9-1)
+OpenJDK 64-Bit Server VM (build 25.0.3+9-1, mixed mode, sharing)
 ```
 
 ## Install

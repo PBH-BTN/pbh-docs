@@ -22,10 +22,10 @@ fetch https://github.com/PBH-BTN/PeerBanHelper/releases/download/v6.4.2/peerbanh
 
 ## 安装依赖
 
-使用 `pkg` 工具安装 OpenJDK 21 或更高版本：
+使用 `pkg` 工具安装 OpenJDK 25 或更高版本：
 
 ```shell
-sudo pkg install openjdk21
+sudo pkg install openjdk25
 ```
 
 验证安装是否成功：
@@ -37,8 +37,8 @@ java -version
 如果安装成功，终端将输出类似以下的版本号信息：
 
 ```plain
-OpenJDK Runtime Environment (build 21.0.x+y-z)
-OpenJDK 64-Bit Server VM (build 21.0.x+y-z, mixed mode, sharing)
+OpenJDK Runtime Environment (build 25.0.x+y-z)
+OpenJDK 64-Bit Server VM (build 25.0.x+y-z, mixed mode, sharing)
 ```
 
 请注意，上述输出中的 `x`, `y`, `z` 为版本号的具体数字，可能与你实际安装的版本有所不同。
