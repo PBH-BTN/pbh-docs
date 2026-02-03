@@ -39,11 +39,8 @@ services:
 
 推荐您同时部署 watchtower，只需运行的下面命令，它就可以自动更新容器而无需人工管理:
 
-```shell
-sudo docker run --detach \
-    --name watchtower \
-    --volume /var/run/docker.sock:/var/run/docker.sock \
-    nickfedor/watchtower
+```sh
+sudo docker run --detach --name watchtower --volume /var/run/docker.sock:/var/run/docker.sock --restart=unless-stopped nickfedor/watchtower
 ```
 
 仍然建议您定期检查 PBH 版本发布页查看变更日志。

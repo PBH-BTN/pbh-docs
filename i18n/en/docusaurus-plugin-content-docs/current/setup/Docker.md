@@ -40,10 +40,7 @@ To upgrade the version, run `sudo docker compose pull` in the same directory as 
 We recommend also deploying Watchtower. Simply run the following command and it will automatically update containers without manual management:
 
 ```shell
-sudo docker run --detach \
-    --name watchtower \
-    --volume /var/run/docker.sock:/var/run/docker.sock \
-    nickfedor/watchtower
+sudo docker run --detach --name watchtower --volume /var/run/docker.sock:/var/run/docker.sock --restart=unless-stopped nickfedor/watchtower
 ```
 
 ## Using Podman Quadlet
