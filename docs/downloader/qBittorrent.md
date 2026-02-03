@@ -61,3 +61,11 @@ PeerBanHelper 利用 qBittorrent 的 WebAPI 与 qBittorrent 进行交互。本�
 6. 点击“确定”按钮，如果提示成功，则表示添加成功。
 
 ![step5](assets/qBittorrent-step5.png)
+
+## 故障排除
+
+### 无法连接到下载器，登录时出现错误：身份认证失败次数过多，您的 IP 地址已被封禁
+
+默认情况下 qBittorrent 带有防暴力破解保护机制。如果您连接下载器时连续失败次数过多，默认会被封禁 15 分钟。  
+可以通过重启 qBittorrent 立刻解除封禁。
+

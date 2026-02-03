@@ -61,3 +61,11 @@ Follow these steps to add the downloader:
 6. Click on the "OK" button to confirm; if prompted successfully, it indicates that the addition was successful.
 
 ![step5](assets/qBittorrent-step5.png)
+
+## Troubleshooting
+
+### Unable to Connect to Downloader, Authentication Error: Too Many Failed Login Attempts, Your IP Address Has Been Banned
+
+By default, qBittorrent includes brute-force protection. If you experience multiple consecutive connection failures when connecting to the downloader, your IP will be banned for 15 minutes by default.  
+You can restart qBittorrent to immediately lift the ban.
+
