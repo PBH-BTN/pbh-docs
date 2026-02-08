@@ -6,55 +6,72 @@ sidebar_position: 1
 
 >本指南适用于Debian、Ubuntu以及Kali Linux等基于Debian的Linux发行版。
 
-## 安装所需依赖
+## 前置条件
 
-为了运行 PeerBanHelper，您需要先安装 OpenJDK 21 或更高版本的 Java 开发工具包（JDK）。使用 `apt` 包管理器，您可以轻松地完成安装。
-
-执行以下命令以更新包列表并安装 OpenJDK 21（请注意，版本号可能会随着新版本的发布而有所变化，这里以21为例）：
+安装所需依赖，并导入 PBH-BTN 软件包公钥到系统中：
 
 ```shell
-sudo apt-get update
-sudo apt-get install openjdk-21-jdk-headless -y
+sudo apt update
+sudo apt install ca-certificates cur -y
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://raw.githubusercontent.com/PBH-BTN/apt-repo/master/public-key.asc -o /etc/apt/keyrings/pbh-btn.asc
+sudo chmod a+r /etc/apt/keyrings/pbh-btn.asc
 ```
 
-安装完成后，您可以通过运行以下命令来验证 JDK 是否成功安装：
+添加软件源，将下面的内容保存到 `/etc/apt/sources.list.d/pbh-btn.sources`
+
+```
+Types: deb
+URIs: https://apt-repo.pbh-btn.com/debian
+Suites: sid
+Components: main
+Signed-By: /etc/apt/keyrings/pbh-btn.asc
+```
+
+最后更新软件源：
 
 ```shell
-java -version
+sudo apt update
+sudo apt search PeerBanHelper
 ```
 
-如果安装成功，终端将显示类似以下的版本号信息，其中“xx.xx.xxx”等表示具体的版本号：
+如果输出下面的内容，则说明软件源导入成功：
 
-```plain
-OpenJDK version "xx.xx.xxx" xxxx-xx-xx
-OpenJDK Runtime Environment (build xxxxxxx)
-OpenJDK 64-Bit Server VM (build xxxxxxx, mixed mode, sharing)
+```
+peerbanhelper/sid,now 9.2.5 all [installed]
+PeerBanHelper is a tool to auto ban peers on the bitorrent network
 ```
 
-## 下载并安装 PeerBanHelper
-
-接下来，您需要下载 PeerBanHelper 的 DEB 安装包。请访问 [PBH最新版版本发布页](https://github.com/PBH-BTN/PeerBanHelper/releases/latest) 并下载适用于您系统的 DEB 文件。
-
-下载完成后，使用以下命令安装 DEB 文件（请注意替换文件名中的版本号等信息）：
+可以用下面的命令安装：
 
 ```shell
-sudo dpkg -i peerbanhelper_*.*.*_all.deb
+sudo apt install peerbanhelper
 ```
 
-系统可能会提示您安装一些额外的依赖项，按照提示操作即可。
-
-## 启动并配置 PeerBanHelper
-
-安装完成后，您可以使用以下命令启动 PeerBanHelper 服务：
+如需卸载：
 
 ```shell
-systemctl start peerbanhelper
+sudo apt remove peerbanehelper
 ```
 
-如果您希望 PeerBanHelper 在系统启动时自动运行，可以执行以下命令将其设置为开机启动：
+## 启停 PeerBanHelper
+
+PeerBanHelper 在安装时会安装 systemd 服务单元：
+
+启动并设置开机自启：
 
 ```shell
-systemctl enable peerbanhelper
+sudo systemctl enable --now peerbanehelper
 ```
 
-现在，PeerBanHelper 已经在您的系统上运行，并且会在每次系统启动时自动启动。您可以通过 `systemctl status peerbanhelper` 命令来检查服务的运行状态。
+停止并取消开机自启：
+
+```shell
+sudo systemctl disable --now peerbanhelper
+```
+
+查看运行状态:
+
+```shell
+sudo systemctl status peerbanhelper
+```
