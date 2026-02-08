@@ -4,15 +4,19 @@ sidebar_position: 5
 
 # 使用套件部署
 
-## 添加矿神 SPK7 源至套件中心
+## 添加 PBH-BTN 源至套件中心
 
-PeerBanHelper 与 [imnks.com](https://imnks.com/) 携手合作，将 PeerBanHelper 以容器套件的形式引入群晖（Synology）的套件中心，提供便捷的安装与更新服务。
+登录 DSM 控制台，转到 “套件中心 -> 设置 -> 套件来源” 并如图所示添加 PBH-BTN SPK 套件源：
 
-请遵循[矿神SPK源官方教程](https://imnks.com/1780.html)的指引，为您的 DSM（DiskStation Manager）设备启用矿神社区源。
+```
+https://spk-repo.pbh-btn.com/nas
+```
+
+![pbhbtn1](./assets/pbhbtn-1.png)
 
 ## 在套件中心安装 PeerBanHelper
 
-成功添加矿神社区源后，请前往套件中心的“社群”选项卡，并在搜索框中输入“PeerBanHelper”。
+成功添加 PBH-BTN SPK 源后，请前往套件中心的“社群”选项卡，并在搜索框中输入“PeerBanHelper”。
 
 ![imnks1](./assets/imnks1.jpg)
 
