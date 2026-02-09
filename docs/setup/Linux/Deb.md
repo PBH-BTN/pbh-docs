@@ -51,7 +51,7 @@ sudo apt install peerbanhelper
 如需卸载：
 
 ```shell
-sudo apt remove peerbanehelper
+sudo apt remove peerbanhelper
 ```
 
 ## 启停 PeerBanHelper
@@ -61,7 +61,7 @@ PeerBanHelper 在安装时会安装 systemd 服务单元：
 启动并设置开机自启：
 
 ```shell
-sudo systemctl enable --now peerbanehelper
+sudo systemctl enable --now peerbanhelper
 ```
 
 停止并取消开机自启：
