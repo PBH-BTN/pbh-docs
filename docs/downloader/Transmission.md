@@ -12,7 +12,7 @@ sidebar_position: 999
 
 :::warning
 
-当前 Transmission 存在已知的 [IPV6 兼容问题](https://github.com/transmission/transmission/issues/7229)，如果系统支持 IPV6 协议且拥有 IPV6 地址，则无法从本地主机 上更新来自 PeerBanHelper 的封禁列表。从而导致下载器添加失败。 
+当前 Transmission 存在已知的 [IPV6 兼容问题](https://github.com/transmission/transmission/issues/7229)，如果系统支持 IPV6 协议且拥有 IPV6 地址，则无法从本地主机或仅 IPV4 主机上更新来自 PeerBanHelper 的封禁列表。从而导致下载器添加失败。 
 
 :::
 

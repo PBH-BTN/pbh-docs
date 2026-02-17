@@ -12,7 +12,7 @@ All downloaders deployed in Docker must not use bridge network mode, and must us
 
 :::warning
 
-There is a known [IPv6 compatibility issue](https://github.com/transmission/transmission/issues/7229) with the current version of Transmission. If your system supports the IPv6 protocol and has an IPv6 address, the blocklist from PeerBanHelper cannot be updated from localhost. This will cause the downloader to fail to be added.
+There is a known [IPv6 compatibility issue](https://github.com/transmission/transmission/issues/7229) with the current version of Transmission. If your system supports the IPv6 protocol and has an IPv6 address, the blocklist from PeerBanHelper cannot be updated from localhost or IPV4-only host. This will cause the downloader to fail to be added.
 
 :::
 
