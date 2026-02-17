@@ -10,6 +10,12 @@ All downloaders deployed in Docker must not use bridge network mode, and must us
 
 :::
 
+:::warning
+
+There is a known [IPv6 compatibility issue](https://github.com/transmission/transmission/issues/7229) with the current version of Transmission. If your system supports the IPv6 protocol and has an IPv6 address, the blocklist from PeerBanHelper cannot be updated from localhost. This will cause the downloader to fail to be added.
+
+:::
+
 Only Transmission v4.1.0-beta2 or newer versions can be added and supported. There are no exceptions. Please don't ask if a certain version can be supported. Anything lower than v4.1.0-beta2 won't work!
 
 For users using Transmission on Linux and Docker, you probably have already configured WebUI, so you can skip the previous steps.

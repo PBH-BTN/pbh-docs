@@ -10,6 +10,12 @@ sidebar_position: 999
 
 :::
 
+:::warning
+
+当前 Transmission 存在已知的 [IPV6 兼容问题](https://github.com/transmission/transmission/issues/7229)，如果系统支持 IPV6 协议且拥有 IPV6 地址，则无法从本地主机 上更新来自 PeerBanHelper 的封禁列表。从而导致下载器添加失败。 
+
+:::
+
 只有 v4.1.0-beta2 或者更新版本的 Transmission 才能添加和和支持。没有任何例外情况。请不要再问某某个版本能否支持了。比 v4.1.0-beta2 低的就是不行！
 
 对于在 Linux 和 Docker 上使用 Transmission 的用户，你大概已经配置好了 WebUI，可以跳过前面的步骤。
