@@ -22,7 +22,7 @@ sidebar_position: 2
 
 ![upload-fpk](./assets/upload-fpk.webp)
 
-左下角 “手动安装”，上传 PeerBanHelper 的 fpk 包。
+点击左下角的“手动安装”，并上传已下载的 PeerBanHelper fpk 包。
 
 ![safety](./assets/safety.webp)
 
