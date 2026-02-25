@@ -36,7 +36,7 @@ sidebar_position: 1
 
 ![welcome](./assets/welcome.webp)
 
-最后查看欢迎使用信息，你可以在这里再次访问 PBH-BTN & 文档，点击下一步完成用户向导。
+最后是欢迎页面，你可以在此再次访问 PBH-BTN 和相关文档，点击下一步即可完成用户向导。
 
 ## 找到 PeerBanHelper
 
