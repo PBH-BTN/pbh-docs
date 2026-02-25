@@ -28,7 +28,7 @@ sidebar_position: 1
 
 ![wizard-license](./assets/wizard-license.webp)
 
-你需要同意 BTN-PBH 协议，勾选“我接受许可协议的条款”并点击下一步。
+你需要同意 PBH-BTN 协议，勾选"我接受许可协议的条款"并点击下一步。
 
 ![wizard](./assets/wizard.webp)
 
