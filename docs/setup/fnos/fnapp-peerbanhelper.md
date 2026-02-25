@@ -30,4 +30,4 @@ sidebar_position: 2
 
 
 
-其他步骤与具体详情和[使用应用中心部署](./fn-appcenter.md) 相关。
+其他步骤与详情请参考[使用应用中心部署](./fn-appcenter.md)文档。
