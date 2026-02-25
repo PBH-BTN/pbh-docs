@@ -10,7 +10,7 @@ sidebar_position: 2
 
 ## 访问并下载 fpk
 
-在 fnOS/飞牛 OS 打包 [miaoermua/fnapp-peerbanhelper](https://github.com/miaoermua/fnapp-peerbanhelper) 项目中，找到 [Releases](https://github.com/miaoermua/fnapp-peerbanhelper/releases) 下载标有 Latest 版本的 fpk 文件。
+请访问 [miaoermua/fnapp-peerbanhelper](https://github.com/miaoermua/fnapp-peerbanhelper) 项目的 [Releases](https://github.com/miaoermua/fnapp-peerbanhelper/releases) 页面，下载最新的 fpk 文件（带有 Latest 标签）。
 
 例如：`peerbanhelper-9.X.X.fpk`
 
