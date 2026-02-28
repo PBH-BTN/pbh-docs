@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # 手动部署
 
+声明：fnOS 版本由 PBH-BTN 外的第三方进行维护，[miaoermua/fnapp-peerbanhelper](https://github.com/miaoermua/fnapp-peerbanhelper/) 不属于官方维护项目。
+
 ![appcenter-pbh-info](./assets/appcenter-pbh-info.webp)
 
 在 fnOS/飞牛OS 中虽然提供了官方应用商店，但其应用审核与版本更新速度较慢。如果你希望尽快使用新版本或获取安全更新，建议通过手动下载 fpk 包的方式进行部署，以绕过“应用中心”的审核流程。

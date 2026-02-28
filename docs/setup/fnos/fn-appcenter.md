@@ -4,6 +4,8 @@ sidebar_position: 1
 
 # 使用应用中心部署
 
+声明：fnOS 版本由 PBH-BTN 外的第三方进行维护，[miaoermua/fnapp-peerbanhelper](https://github.com/miaoermua/fnapp-peerbanhelper/) 不属于官方维护项目。
+
 :::tip
 虽然以下提供了应用中心部署的步骤，但飞牛官方应用审核与更新提交新版本都不积极，如果你迫切需要新版本或获取安全更新，请使用 [手动下载 fpk](./fnapp-peerbanhelper.md) 以确保最新体验。
 :::
