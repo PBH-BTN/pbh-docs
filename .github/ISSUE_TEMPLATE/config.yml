@@ -2,6 +2,6 @@ blank_issues_enabled: true
 contact_links:
   - name: '有关 PeerBanHelper 的议题请前往 PBH-BTN/PeerBanHelper 仓库'
     about: |-
-      这里是文档仓库，反馈内容仅限于文档本身。如果和软件有关，请点此前往 PBH-BTN/PeerBanHelper 仓库
+      这里是文档仓库，反馈内容仅限于文档本身。如果和软件有关，请点此前往 PBH-BTN/PeerBanHelper 仓库  
       There is documention repository, any software related issues please click here go PBH-BTN/PeerBanHelper repository.
     url: 'https://github.com/PBH-BTN/PeerBanHelper/issues/new'
