@@ -16,6 +16,7 @@ sidebar_position: 1
 | Windows 便携版                | [点击此处查看](./setup/Windows/Portable.md)         |
 | Docker 容器化部署             | [点击此处查看](./setup/Docker.md)          |
 | 群晖 DSM（套件方式）          | [点击此处查看](./setup/Synology%20DSM/pbhbtn.md)     |
+| 飞牛 OS（应用中心方式）       | [点击此处查看](./setup/fnos/fn-appcenter.md)     |
 | Linux 安装版                  | [点击此处查看](./setup/Linux/LinuxInstall4j.md)    |
 | Linux 手动部署方案            | [点击此处查看](./setup/Linux/Manual.md)           |
 | Linux 包管理器安装（Deb）     | [点击此处查看](./setup/Linux/Deb.md)             |
