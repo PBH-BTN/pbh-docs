@@ -24,5 +24,6 @@ scoop install extras/peerbanhelper
 ## 升级
 
 ```pwsh
+scoop update
 scoop update peerbanhelper
 ```

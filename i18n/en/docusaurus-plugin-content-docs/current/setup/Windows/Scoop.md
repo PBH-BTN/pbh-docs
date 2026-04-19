@@ -24,5 +24,6 @@ Open PeerBanHelper in Scoop Apps folder of Start Menu.
 ## Upgrade
 
 ```pwsh
+scoop update
 scoop update peerbanhelper
 ```
