@@ -8,7 +8,7 @@ Scoop is a command-line installer for Windows that downloads and manages package
 
 ## Install Scoop
 
-Follow the quickstart instructions at [https://scoop.sh](https://scoop.sh/).
+Follow the quickstart instructions at [https://scoop.sh](https://scoop.sh).
 
 ## Install PeerBanHelper
 
