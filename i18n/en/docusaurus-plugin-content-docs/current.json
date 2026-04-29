@@ -11,6 +11,10 @@
 		"message": "Install and Deploy PeerBanHelper",
     "description": "The generated-index page description for category 安装部署 in sidebar tutorialSidebar"
   },
+  "sidebar.tutorialSidebar.category.非官方部署": {
+    "message": "Unofficial Deployment",
+    "description": "The label for category 非官方部署 in sidebar tutorialSidebar"
+  },
   "sidebar.tutorialSidebar.category.下载器配置": {
 		"message": "Configure downloader",
     "description": "The label for category 下载器配置 in sidebar tutorialSidebar"

@@ -11,13 +11,14 @@ Please select your operating system or deployment method to view the installatio
 
 | Platform                        | Link                                  |
 | ------------------------------- | ------------------------------------- |
-| Windows Installer               | [View](./setup/Windows/Installer.md)     |
-| Windows Portable                | [View](./setup/Windows/Portable.md)      |
-| Docker                          | [View](./setup/Docker.md)                |
-| Synology DSM(Package)           | [View](./setup/Synology%20DSM/Imnks.md)  |
-| Linux Installer                 | [View](./setup/Linux/LinuxInstall4j.md)  |
-| Linux Manual Install           | [View](./setup/Linux/Manual.md)          |
-| Package Manager (Deb)           | [View](./setup/Linux/Deb.md)             |
+| Windows Installer               | [View](./setup/Windows/Installer.md)         |
+| Windows Portable                | [View](./setup/Windows/Portable.md)          |
+| Windows Scoop                   | [View](./setup/Windows/Unofficial//Scoop.md) |
+| Docker                          | [View](./setup/Docker.md)                    |
+| Synology DSM(Package)           | [View](./setup/Synology%20DSM/Imnks.md)      |
+| Linux Installer                 | [View](./setup/Linux/LinuxInstall4j.md)      |
+| Linux Manual Install            | [View](./setup/Linux/Manual.md)              |
+| Package Manager (Deb)           | [View](./setup/Linux/Deb.md)                 |
 
 ## Need Support?
 
@@ -29,4 +30,3 @@ PeerBanHelper is an open-source software, and you are free to distribute and dow
 
 If PeerBanHelper has been helpful to you, consider supporting us with a donation on [Afdian](https://afdian.com/a/Ghost_chu).
 All donation income will be used to maintain the PBH-BTN infrastructure and reward our hardworking community maintainers.
-

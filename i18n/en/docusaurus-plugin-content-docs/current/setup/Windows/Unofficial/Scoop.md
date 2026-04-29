@@ -4,6 +4,10 @@ sidebar_position: 3
 
 # Scoop
 
+:::warning
+Installing via Scoop is a community-maintained, unofficial deployment method and is not officially supported by PeerBanHelper. On Windows, [use the installer](../Installer.md) instead, as it handles firewall configuration and startup management.
+:::
+
 Scoop is a command-line installer for Windows that downloads and manages packages in a portable way. It can check for updates and automatically maintain persistent data.
 
 ## Install Scoop

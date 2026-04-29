@@ -4,6 +4,10 @@ sidebar_position: 2
 
 # 使用便携版
 
+:::warning
+Windows平台任何情况下均应[使用安装程序部署](./Installer.md)，它还兼顾防火墙配置和开机启动管理的任务。
+:::
+
 ## 下载与安装流程
 
 请访问 [GitHub Releases](https://github.com/PBH-BTN/PeerBanHelper/releases/latest) 页面，下载标注为 Windows Portable 的 `.zip` 格式压缩包。
