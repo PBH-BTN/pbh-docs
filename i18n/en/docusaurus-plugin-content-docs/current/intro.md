@@ -13,7 +13,7 @@ Please select your operating system or deployment method to view the installatio
 | ------------------------------- | ------------------------------------- |
 | Windows Installer               | [View](./setup/Windows/Installer.md)         |
 | Windows Portable                | [View](./setup/Windows/Portable.md)          |
-| Windows Scoop                   | [View](./setup/Windows/Unofficial//Scoop.md) |
+| Windows Scoop Install           | [View](./setup/Windows/Unofficial//Scoop.md) |
 | Docker                          | [View](./setup/Docker.md)                    |
 | Synology DSM(Package)           | [View](./setup/Synology%20DSM/Imnks.md)      |
 | Linux Installer                 | [View](./setup/Linux/LinuxInstall4j.md)      |
