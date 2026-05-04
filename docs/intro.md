@@ -14,6 +14,7 @@ sidebar_position: 1
 | ----------------------------- | ---------------------------------- |
 | Windows 安装版                | [点击此处查看](./setup/Windows/Installer.md)         |
 | Windows 便携版                | [点击此处查看](./setup/Windows/Portable.md)         |
+| Windows Scoop安装版           | [点击此处查看](./setup/Windows/Unofficial/Scoop.md) |
 | Docker 容器化部署             | [点击此处查看](./setup/Docker.md)          |
 | 群晖 DSM（套件方式）          | [点击此处查看](./setup/Synology%20DSM/pbhbtn.md)     |
 | Linux 安装版                  | [点击此处查看](./setup/Linux/LinuxInstall4j.md)    |
