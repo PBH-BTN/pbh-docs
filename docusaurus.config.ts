@@ -129,7 +129,7 @@ const config: Config = {
             },
             {
               label: "Telegram",
-              href: "https://t.me/+_t3Nt5GZ6bJmYjBl",
+              href: "https://t.me/+TfjwEmsUKhZjMTI1",
             },
           ],
         },
