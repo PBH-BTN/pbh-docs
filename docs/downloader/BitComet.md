@@ -14,11 +14,6 @@ PeerBanHelper 利用 BitComet 的 WebAPI 与 BitComet 进行交互。本章将�
 
 ## 注意事项
 
-:::danger
-
-**重要提示**：BitComet 的支持目前仍处于高度实验性阶段，对于封禁效果和运行稳定性，我们不做任何保证。
-:::
-
 BitComet 用户可能会经常遇到“正在封禁的 Peer 已处于封禁列表中”的提示，这是由于 BitComet 的封禁操作是异步处理的。在大多数情况下，您可以安全地忽略此警告（除非它持续不断地出现）。如果您遇到封禁线程未响应或“Unable to retrieve peers”的错误提示，这通常是由于 BitComet 的 WebAPI 超时未响应。该问题已反馈给 BitComet，但尚未得到修复。请放心，PeerBanHelper 会在下一次封禁流程中重新尝试获取。
 
 ## 确认版本
