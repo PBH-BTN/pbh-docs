@@ -75,6 +75,12 @@ Basic Auth 是在浏览器访问时弹出用户名密码验证框的安全机制
 
 请使用 [IP 黑名单功能](./module/ip-address-blocker.md)。
 
+## 为什么配置了封禁规则，但有些 Peer 没有被封禁？
+
+PBH 仅检查处于**活跃传输状态**的种子（`downloading`、`uploading`、`stalledDL`、`forcedDL`、`forcedUP` 等）。如果 Peer 所在的种子处于 `stalledUP`（做种但无数据传输）或 `pausedUP`/`pausedDL`（暂停）状态，PBH **不会获取该种子的 Peer 列表**，所有封禁规则（IP 封禁、订阅规则、ClientName、PeerID 等）均不生效。当种子恢复活跃后，PBH 会立即恢复检查。
+
+这是 PBH 的性能优化设计：减少对下载器的 API 请求次数和负载。即使有此限制，部分下载器在全量封禁检查时仍可能出现卡死。
+
 ## 为何无法编辑自定义脚本？什么是“只读模式”？
 
 出于安全考虑，脚本编辑功能拒绝来自互联网的请求，以防 Token 泄漏导致设备受损。若确需在互联网上编辑脚本，并理解相关风险（Token 泄漏后黑客可执行任意代码），可在启动时添加以下标志：

@@ -8,11 +8,24 @@ PeerID 是由 Peer 主动汇报的（可以被随意修改），因此不能作�
 
 ![peer-id](./assets/peer-id.png)
 
+## 生效范围
+
+PBH 仅检查处于[活跃传输状态](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-4.1)#torrent-management)的种子。`stalledUP`（做种无传输）、暂停状态下的 Peer **不会被检查**。
+
+详见 [FAQ](../faq.md#为什么配置了封禁规则但有些-peer-没有被封禁)。
+
+## 触发条件
+
+- **管道**：种子处于[活跃传输状态](#生效范围)
+- **握手**：Peer 已完成握手（空 PeerID 跳过）
+- **缓存**：无缓存，每次 Ban Wave 都检查
+- **匹配**：[JSON 规则引擎](../misc/json-engine.md)，支持 `STARTS_WITH`/`CONTAINS`/`EQUALS`/`REGEX`，首次命中即 BAN
+
 ## 配置文件
 
 规则使用[JSON规则引擎](../misc/json-engine.md)语法。
 
-## 配置文件
+## 配置示例
 
 ```yaml
   # PeerId 封禁

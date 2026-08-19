@@ -7,6 +7,12 @@ PeerBanHelper 的重要模块之一，默认订阅来自 [PBH-BTN/BTN-Collected-
 不建议通过配置文件配置此功能，您可以直接使用 WebUI 的可视化编辑
 :::
 
+## 生效范围
+
+PBH 仅检查处于[活跃传输状态](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-4.1)#torrent-management)的种子。`stalledUP`（做种无传输）、暂停状态下的 Peer **不会被检查**。
+
+此为性能优化设计，详见 [FAQ](../faq.md#为什么配置了封禁规则但有些-peer-没有被封禁)。
+
 ![rules-sub](./assets/sub-rules.png)
 
 默认情况下，规则订阅模块会在每次 PeerBanHepler 启动时，或者每隔 4 个小时更新一次所有的订阅规则。您可以点击齿轮小标记更改订阅规则的更新频率。
@@ -14,6 +20,13 @@ PeerBanHelper 的重要模块之一，默认订阅来自 [PBH-BTN/BTN-Collected-
 如果需要查看规则的变动情况或者更新是否成功，可点击“查看历史记录”按钮，查看历史更新记录。
 
 ![rules-sub-logs](./assets/sub-rules-logs.png)
+
+## 触发条件
+
+- **管道**：种子处于[活跃传输状态](#生效范围)
+- **握手**：Peer 已完成握手
+- **缓存**：无缓存，每次 Ban Wave 都检查
+- **匹配**：Trie 树匹配 IP，规则每 4 小时自动更新
 
 ## 制作规则
 

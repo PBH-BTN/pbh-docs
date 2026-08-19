@@ -1,9 +1,24 @@
 # IP 封禁
 
 由于 PeerBanHelper 通过操作下载器的 IP 黑名单实现 Peer 封禁，因此毫无疑问，您的 IP 黑名单绝对会被 PeerBanHelper 覆盖掉。因此 PeerBanHelper 内置了一个单独的 IP 黑名单功能。
+
 :::tip
 不建议通过配置文件配置此功能，您可以直接使用 WebUI 的可视化编辑。
 :::
+
+## 生效范围
+
+PBH 仅检查处于[活跃传输状态](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-4.1)#torrent-management)的种子。`stalledUP`（做种无传输）、暂停状态下的 Peer **不会被检查**。
+
+此为性能优化设计，详见 [FAQ](../faq.md#为什么配置了封禁规则但有些-peer-没有被封禁)。
+
+## 触发条件
+
+- **管道**：种子处于[活跃传输状态](#生效范围)
+- **握手**：Peer 已完成握手
+- **缓存**：pass 结果缓存 10 分钟，命中规则不缓存
+- **匹配**：端口 → CIDR → ASN → 地区 → 城市 → 网络类型，首次命中即 BAN
+
 ## IPs
 
 IP 黑名单，支持输入一个或多个 IP 地址或者 CIDR 地址。列出的 IP 或者被 CIDR 包含的 IP 将在连接下载器时被封禁。

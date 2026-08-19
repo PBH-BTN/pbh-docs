@@ -2,6 +2,19 @@
 
 PeerBanHelper 允许用户加载 [AviatorScript 用户脚本](https://www.yuque.com/boyan-avfmj/aviatorscript/cpow90)。  
 
+## 触发条件
+
+- **管道**：种子处于[活跃传输状态](../faq.md#为什么配置了封禁规则但有些-peer-没有被封禁)
+- **前置**：`data/scripts/` 下至少有一个已编译成功的 `.av` 脚本
+- **缓存**：脚本通过 `## @CACHEABLE true` 声明启用，pass 结果缓存；`@CACHEABLE false` 或未声明则不缓存
+- **匹配**：所有脚本并行执行，每个最长 1500ms（超时放行）
+
+| 脚本返回值 | 效果 |
+|---|---|
+| `false` / `0` / `NO_ACTION` | 放行 |
+| `true` / `1` / `BAN` | 封禁 |
+| `2` / `SKIP` | **跳过所有后续规则** |
+
 ## 简述
 
 AviatorScript 允许用户加载一个用户脚本，以便在 PBH 检测 Peer 时执行自定义的代码。支持反射、实例创建等高级操作，拥有完整编程能力。  

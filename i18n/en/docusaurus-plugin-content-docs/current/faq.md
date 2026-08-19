@@ -75,6 +75,12 @@ This is Basic Auth.
 
 When a Peer connects and generates traffic, it is counted as one access. If the Peer is banned before generating traffic (for example, during the handshake stage), it is only counted as one ban.
 
+## Why are some connected peers not being banned despite configured rules?
+
+PBH only checks torrents in an **active transfer state** (`downloading`, `uploading`, `stalledDL`, `forcedDL`, `forcedUP`, etc.). If the torrent is in `stalledUP` (seeding but no data transfer), `pausedUP`, or `pausedDL` state, PBH **will not fetch the peer list** for that torrent, and all banning rules (IP block, subscription rules, ClientName, PeerID, etc.) will not apply. Once the torrent becomes active again, PBH resumes checking immediately.
+
+This is an intentional performance optimization to reduce API requests and downloader load. Even with this restriction, some downloaders still experience freezes during a full ban wave cycle.
+
 ## How to permanently ban IP
 
 Consider to use [IP Blacklist](./module/ip-address-blocker.md).

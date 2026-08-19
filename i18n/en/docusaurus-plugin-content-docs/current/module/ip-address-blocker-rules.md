@@ -7,6 +7,13 @@ When an IP from the rules connects to the downloader, PeerBanHelper will immedia
 It is not recommended to configure this feature through the configuration file; you can directly use the visual editor in the WebUI.
 :::
 
+## Scope
+
+PBH only checks torrents in an [active transfer state](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-4.1)#torrent-management). Peers on `stalledUP` (seeding, no transfer) or paused torrents **will not be checked**.
+
+This is a performance optimization. See [FAQ](../faq.md#why-are-some-connected-peers-not-being-banned-despite-configured-rules).
+
+
 ![rules-sub](./assets/sub-rules.png)
 
 By default, the rule subscription module updates all subscription rules every time PeerBanHelper starts or every 4 hours. You can click the gear icon to change the update frequency of the subscription rules.
@@ -28,14 +35,14 @@ PeerBanHelper can load an IP rule set composed of the following:
 ```yaml
   # 订阅规则
   # Rules Subscription
-  # 建议在 WebUI 上配置
+  # 建议�?WebUI 上配�?
   # Recommended configure this module on WebUI
   ip-address-blocker-rules:
     enabled: true
-    # 封禁时间，单位：毫秒，使用 default 则跟随全局设置
+    # 封禁时间，单位：毫秒，使�?default 则跟随全局设置
     ban-duration: 259200000
-    # 检查间隔
-    check-interval: 14400000 # 4小时检查一次 毫秒; Timeunit: ms
+    # 检查间�?
+    check-interval: 14400000 # 4小时检查一�?毫秒; Timeunit: ms
     # 规则列表 - Rules list
     rules:
       # 规则ID（任意） - Rule Id(any)
