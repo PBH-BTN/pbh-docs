@@ -6,6 +6,12 @@ Since PeerBanHelper implements Peer blocking by operating the downloader's IP bl
 It is not recommended to configure this feature through the configuration file; you can directly use the visual editor in the WebUI.
 :::
 
+## Scope
+
+PBH only checks torrents in an [active transfer state](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-4.1)#torrent-management). Peers on `stalledUP` (seeding, no transfer) or paused torrents **will not be checked**.
+
+This is a performance optimization. See [FAQ](../faq.md#why-are-some-connected-peers-not-being-banned-despite-configured-rules).
+
 ## IPs
 
 IP blacklist, supports entering one or more IP addresses or CIDR addresses. The listed IPs or those included in the CIDR will be banned when connecting to the downloader.

@@ -5,6 +5,13 @@ Note that the ClientName is actively reported by the Peer (and can be arbitraril
 
 ClientName is an [extended protocol](https://www.bittorrent.org/beps/bep_0010.html) of BitTorrent, so a Peer may not have a ClientName. In such cases, PeerBanHelper will display it as `N/A`.
 
+## Scope
+
+PBH only checks torrents in an [active transfer state](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-4.1)#torrent-management). Peers on `stalledUP` (seeding, no transfer) or paused torrents **will not be checked**.
+
+See [FAQ](../faq.md#why-are-some-connected-peers-not-being-banned-despite-configured-rules).
+
+
 ## Configuration File
 
 The rules use the [JSON Rules Engine](../misc/json-engine.md) syntax. You can control the banning behavior by writing JSON rules. However, for simple bans and exceptions, you can complete them through the WebUI.
@@ -12,7 +19,7 @@ The rules use the [JSON Rules Engine](../misc/json-engine.md) syntax. You can co
 ![Client Name](./assets/client-name.png)
 
 ```yaml
-  # 客户端名称封禁
+  # 客户端名称封�?
   # ClientName blacklist
   client-name-blacklist:
     enabled: true

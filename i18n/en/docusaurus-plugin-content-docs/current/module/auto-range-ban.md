@@ -3,18 +3,25 @@
 Due to the latency of the [Progress Checker](./progress-cheat-blocker.md), some traffic from the IP is already leached before the user bans it. This feature is designed to help users stop losses in a timely manner.  
 When an IP is banned, ARB will scan all connected peers. If any peer's IP address is in the same subnet as the banned IP, that peer will be chain-banned.
 
+## Scope
+
+PBH only checks torrents in an [active transfer state](https://github.com/qbittorrent/qBittorrent/wiki/WebUI-API-(qBittorrent-4.1)#torrent-management). Peers on `stalledUP` (seeding, no transfer) or paused torrents **will not be checked**.
+
+See [FAQ](../faq.md#why-are-some-connected-peers-not-being-banned-despite-configured-rules).
+
+
 ## Configuration File
 
 ```yaml
-  # 范围 IP 段封禁
-  # 在封禁 Peer 后，被封禁的 Peer 所在 IP 地址的指定前缀长度内的其它 IP 地址都将一同封禁
+  # 范围 IP 段封�?
+  # 在封�?Peer 后，被封禁的 Peer 所�?IP 地址的指定前缀长度内的其它 IP 地址都将一同封�?
   # Range Ban
   # After a peer got banned, other connected peers that in same range with banned peers will also get banned.
   auto-range-ban:
     # 是否启用
     # Enable?
     enabled: true
-    # 封禁时间，单位：毫秒，使用 default 则跟随全局设置
+    # 封禁时间，单位：毫秒，使�?default 则跟随全局设置
     ban-duration: 604800000
     # IPV4 前缀长度
     # IPV4 prefix length
