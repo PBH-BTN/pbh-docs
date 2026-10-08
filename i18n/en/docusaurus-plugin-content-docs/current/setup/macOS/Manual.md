@@ -53,7 +53,7 @@ touch file `~/Library/LaunchAgents/peerbanhelper.plist` with content:
         <string>-Djava.awt.headless=true</string>
         <string>-jar</string>
         <string>-Xmx512M</string>
-        <string>-Xms512k</string>
+        <string>-Xss512k</string>
         <string>-XX:+UseG1GC</string>
         <string>-XX:+UseStringDeduplication</string>
         <string>-XX:+ShrinkHeapInSteps</string>
